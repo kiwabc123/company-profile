@@ -1,11 +1,121 @@
-
+.about-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 2.5rem auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(34,56,89,0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+}
+.about-block.left {
+  flex-direction: row;
+  background: #f7fafd;
+}
+.about-block.right {
+  flex-direction: row-reverse;
+  background: #fdf7fa;
+}
+.about-block-title {
+  flex: 0 0 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem 1.2rem;
+  text-align: center;
+  min-width: 140px;
+}
+.about-block-content {
+  flex: 1 1 0;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-accent);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  background: transparent;
+}
+.about-block-content ul {
+  padding-left: 1.2em;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .about-block, .about-block.left, .about-block.right {
+    flex-direction: column !important;
+    max-width: 98vw;
+    margin: 1.2rem auto;
+  }
+  .about-block-title {
+    font-size: 1.1rem;
+    padding: 1.2rem 0.7rem;
+    min-width: 0;
+  }
+  .about-block-content {
+    padding: 1.2rem 0.7rem;
+  }
+}
+.about-block {
+  width: 100%;
+  max-width: 700px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(34,56,89,0.08);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s;
+}
+.about-block.left {
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+}
+.about-block.right {
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+.about-block h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.about-block p, .about-block ul {
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.7;
+}
+.about-block ul {
+  padding-left: 1.2em;
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .about-block, .about-block.left, .about-block.right {
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 1.2rem 0.7rem;
+    margin: 1.2rem 0;
+  }
+  .about-block h2 {
+    font-size: 1.3rem;
+  }
+}
 .hero {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  min-height: 320px;
   height: 60vh;
   background-image: url('/images/welcome-room.jpg');
   background-size: cover;
@@ -14,6 +124,130 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 32px 0 rgba(34, 56, 89, 0.18);
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(241, 243, 224, 0.92);
+  padding: 3rem 4rem;
+  text-align: center;
+  color: var(--color-accent);
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 56, 89, 0.18);
+  border: 2px solid var(--color-primary);
+  backdrop-filter: blur(2px);
+}
+
+.overlay h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  text-shadow: 0 2px 8px rgba(34,56,89,0.08);
+}
+
+.overlay p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-accent);
+}
+
+.about-section {
+  width: 100%;
+  background: var(--color-bg-alt);
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image {
+  width: 420px;
+  max-width: 90vw;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 56, 89, 0.12);
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  max-width: 700px;
+  width: 100%;
+  color: var(--color-accent);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  word-break: break-word;
+  overflow: visible;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 2rem 0;
+  }
+  .about-image {
+    margin-bottom: 1.2rem;
+  }
+  .about-content {
+    padding: 0 1rem;
+  }
+  .overlay {
+    padding: 2rem 1rem;
+  }
+  .overlay h1 {
+    font-size: 2rem;
+  }
+}
+.about-image {
+  align-self: start;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .about-image {
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  height: 60vh;
+  background-image: url('/images/welcome-room.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px 0 rgba(34, 56, 89, 0.18);
+  overflow: hidden;
 }
 
 
@@ -47,18 +281,19 @@
 }
 
 .about-section {
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
   background: var(--color-bg-alt);
   padding: 4rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+}
+@media (max-width: 700px) {
+  .hero {
+    min-height: 180px;
+    height: 32vh;
+    padding: 0;
+  }
+  .about-section {
+    padding: 2rem 0;
+  }
 }
 
 .about-image {
@@ -71,7 +306,37 @@
 
 .about-content {
   max-width: 600px;
+  width: 100%;
   color: var(--color-accent);
   font-size: 1.15rem;
   line-height: 1.7;
+  word-break: break-word;
+  overflow: visible;
+  align-self: start;
+  text-align: left;
+}
+
+
+@media (max-width: 700px) {
+  .about-content {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 0 1rem;
+  }
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  width: 100%;
+  display: block;
+  overflow: visible;
+  text-overflow: initial;
 }
