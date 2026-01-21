@@ -1,0 +1,20 @@
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tabs button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}

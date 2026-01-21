@@ -1,0 +1,74 @@
+.discover {
+  margin: 6rem 0;
+  padding: 0 2rem;
+}
+
+.discoverHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.discoverHeader h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.discoverHeader p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.discoverGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.discoverCard {
+  position: relative;
+  height: 360px; /* 🔥 คุมความสูงตรงนี้ */
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  text-decoration: none;
+  color: inherit;
+}
+
+.discoverCard img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.discoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.15),
+    transparent
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  color: #fff;
+}
+
+.discoverOverlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.discoverOverlay span {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.discoverCard:hover img {
+  transform: scale(1.08);
+}
