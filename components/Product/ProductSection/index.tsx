@@ -1,5 +1,7 @@
+
 import { Product } from '../../../interface/product'
 import ProductCard from '../ProductCard/ProductCard'
+import styles from './ProductSection.module.css';
 
 export default function ProductSection({
   title,
@@ -13,7 +15,7 @@ export default function ProductSection({
   return (
     <section style={{ marginBottom: '3rem' }}>
       <h2>{title}</h2>
-      <div className="grid">
+      <div className={styles.productGrid}>
         {products.map((p) => (
           <ProductCard key={p.id} product={p} />
         ))}

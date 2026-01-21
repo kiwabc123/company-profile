@@ -1,0 +1,59 @@
+import { useRouter } from 'next/router'
+import { PRODUCTS } from '../../data/products/products'
+import styles from '../../styles/ProductDetail.module.css'
+import { useState } from 'react'
+
+export default function ProductDetailPage() {
+  const router = useRouter()
+  const { slug } = router.query
+  const product = PRODUCTS.find((p) => p.slug === slug)
+  const [mainImg, setMainImg] = useState(product?.images?.[0] || product?.thumbnail)
+
+  if (!product) return <div>Product not found</div>
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>{product.name}</h1>
+      <div className={styles.gallery}>
+        <img
+          className={styles.mainImg}
+          src={mainImg}
+          alt={product.name}
+        />
+        {product.images && product.images.length > 1 && (
+          <div className={styles.thumbnails}>
+            {product.images.map((img) => (
+              <img
+                key={img}
+                src={img}
+                alt={product.name}
+                className={img === mainImg ? styles.activeThumb : styles.thumb}
+                onClick={() => setMainImg(img)}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+      <div className={styles.info}>
+        <p className={styles.shortDesc}>{product.shortDescription}</p>
+        <p className={styles.desc}>{product.description}</p>
+        {product.specs && (
+          <ul className={styles.specs}>
+            {product.specs.map((spec) => (
+              <li key={spec.label}>
+                <strong>{spec.label}:</strong> {spec.value}
+              </li>
+            ))}
+          </ul>
+        )}
+        {product.features && (
+          <ul className={styles.features}>
+            {product.features.map((f) => (
+              <li key={f}>{f}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  )
+}
