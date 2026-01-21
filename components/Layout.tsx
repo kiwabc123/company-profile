@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
         <div className={styles['nav-right']}>
           <motion.a
             href="/products"
-            initial={{ opacity: 0, y: -30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }}
             whileHover={{ scale: 1.12, color: "#778873" }}
@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
           </motion.a>
           <motion.a
             href="/about"
-            initial={{ opacity: 0, y: -30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }}
             whileHover={{ scale: 1.12, color: "#778873" }}
@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
           </motion.a>
           <motion.a
             href="/contact"
-            initial={{ opacity: 0, y: -30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }}
             whileHover={{ scale: 1.12, color: "#778873" }}
