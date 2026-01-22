@@ -14,6 +14,8 @@ export default function ProductCard({ product }: { product: Product }) {
             src={mainImg}
             alt={product.name}
             loading="lazy"
+            width={300}
+            height={200}
             onError={e => {
               (e.target as HTMLImageElement).style.display = 'none';
               const block = document.createElement('div');
@@ -46,6 +48,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 aria-label={`Show image ${idx + 1}`}
               >
                 <img src={img} alt={product.name + ' thumbnail'} />
+                       <img src={img} alt={product.name + ' thumbnail'} loading="lazy" width={60} height={60} />
               </button>
             ))}
           </div>

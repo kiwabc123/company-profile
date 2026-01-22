@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       <nav className={styles.nav} aria-label="Main navigation">
         <div className={styles['nav-left']}>
           <div className={styles.logoBlock} aria-label="Logo">
-            {/* Logo image with fallback dummy block on error */}
+            {/* Logo image with fallback dummy block on error, SEO optimized */}
             {(() => {
               const [imgError, setImgError] = React.useState(false);
               return imgError ? (
@@ -30,8 +30,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
               ) : (
                 <img
                   src="/logo-placeholder.png"
-                  alt="Company Logo"
+                  alt="FAIR PRICE SUPPLY CO., LTD. Logo"
+                  width={32}
+                  height={32}
                   style={{ width: 32, height: 32, objectFit: 'contain' }}
+                  loading="lazy"
                   onError={() => setImgError(true)}
                 />
               );

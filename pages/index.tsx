@@ -135,6 +135,9 @@ const DURATION = 5000
                 <img
                   src={product.image}
                   alt={product.name}
+                  loading="lazy"
+                  width={240}
+                  height={120}
                   style={{ width: '100%', borderRadius: '1rem', marginBottom: '1rem', objectFit: 'cover', minHeight: 120 }}
                 />
                 <h3>{product.name}</h3>

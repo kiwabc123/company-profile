@@ -19,6 +19,9 @@ export default function ProductDetailPage() {
           className={styles.mainImg}
           src={mainImg}
           alt={product.name}
+          loading="lazy"
+          width={300}
+          height={200}
         />
         {product.images && product.images.length > 1 && (
           <div className={styles.thumbnails}>
@@ -27,6 +30,9 @@ export default function ProductDetailPage() {
                 key={img}
                 src={img}
                 alt={product.name}
+                loading="lazy"
+                width={60}
+                height={60}
                 className={img === mainImg ? styles.activeThumb : styles.thumb}
                 onClick={() => setMainImg(img)}
               />
