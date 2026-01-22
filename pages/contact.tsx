@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Contact.module.css';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export const contactInfo = {
   company: {
@@ -26,6 +27,12 @@ export const contactInfo = {
 };
 
 export default function Contact() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <Head>
@@ -35,8 +42,8 @@ export default function Contact() {
       <motion.section
         className={styles.contactSection}
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        animate={mounted ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
       >
         <h1 className={styles.title}>Contact Us</h1>
         <div className={styles.infoGrid}>
