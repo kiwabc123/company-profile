@@ -49,7 +49,7 @@ export default function Contact() {
         <div className={styles.infoGrid}>
           <motion.div
             className={styles.infoCol}
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -61,7 +61,7 @@ export default function Contact() {
           </motion.div>
           <motion.div
             className={styles.infoCol}
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -72,7 +72,7 @@ export default function Contact() {
           </motion.div>
           <motion.div
             className={styles.infoCol}
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -83,7 +83,7 @@ export default function Contact() {
           </motion.div>
           <motion.div
             className={styles.infoCol}
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
