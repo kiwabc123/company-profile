@@ -1,3 +1,58 @@
+@media (max-width: 900px) {
+  .discover {
+    margin: 3rem 0;
+    padding: 0 1rem;
+  }
+  .discoverHeader h2 {
+    font-size: 1.7rem;
+  }
+  .discoverGrid {
+    gap: 1rem;
+  }
+  .discoverCard {
+    height: 220px;
+    border-radius: 1rem;
+  }
+  .discoverOverlay {
+    padding: 1rem;
+  }
+  .discoverOverlay h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .discover {
+    margin: 1.5rem 0;
+    padding: 0 0.5rem;
+  }
+  .discoverHeader {
+    margin-bottom: 1.2rem;
+  }
+  .discoverHeader h2 {
+    font-size: 1.2rem;
+  }
+  .discoverHeader p {
+    font-size: 0.95rem;
+  }
+  .discoverGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .discoverCard {
+    height: 140px;
+    border-radius: 0.7rem;
+  }
+  .discoverOverlay {
+    padding: 0.5rem;
+  }
+  .discoverOverlay h3 {
+    font-size: 0.95rem;
+  }
+  .discoverOverlay span {
+    font-size: 0.8rem;
+  }
+}
 .discover {
   margin: 6rem 0;
   padding: 0 2rem;

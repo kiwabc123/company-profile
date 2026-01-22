@@ -1,3 +1,60 @@
+@media (max-width: 900px) {
+  .heroOverlay {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100vw;
+    padding: 1.2rem;
+    border-radius: 0 0 2rem 2rem;
+  }
+  .hero {
+    min-height: 60vh;
+    background-position: center top;
+  }
+  .products {
+    margin-top: 1rem;
+  }
+  .slider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .heroOverlay {
+    padding: 0.8rem;
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+  .description {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+  .products {
+    margin-top: 0.5rem;
+  }
+  .slider {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+  .card {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+  .grid {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+}
 .navigationWrapper {
   position: relative;
   width: 100%;
