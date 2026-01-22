@@ -48,8 +48,8 @@ export default function Contact() {
         <h1 className={styles.title}>Contact Us</h1>
         <div className={styles.infoGrid}>
           <motion.div
-            className={styles.infoCol}
-            initial={false}
+            className={styles.contactInfoCol}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -60,8 +60,8 @@ export default function Contact() {
             <p>Business: {contactInfo.company.business}</p>
           </motion.div>
           <motion.div
-            className={styles.infoCol}
-            initial={false}
+            className={styles.contactInfoCol}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -71,8 +71,8 @@ export default function Contact() {
             <p>{contactInfo.person.nameEN}</p>
           </motion.div>
           <motion.div
-            className={styles.infoCol}
-            initial={false}
+            className={styles.contactInfoCol}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -82,8 +82,8 @@ export default function Contact() {
             <p>{contactInfo.address.en}</p>
           </motion.div>
           <motion.div
-            className={styles.infoCol}
-            initial={false}
+            className={styles.contactInfoCol}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}

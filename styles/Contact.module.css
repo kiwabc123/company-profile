@@ -19,7 +19,7 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
-.infoCol {
+.contactInfoCol {
   background: #f7fafd;
   border-radius: 1rem;
   padding: 1.2rem 1rem;
@@ -27,30 +27,30 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.infoCol:hover {
+.contactInfoCol:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(34,56,89,0.12);
 }
 
-.infoCol h2 {
+.contactInfoCol h2 {
   font-size: 1.1rem;
   color: var(--color-primary);
   margin-bottom: 0.7rem;
   font-weight: 700;
 }
-.infoCol p {
+.contactInfoCol p {
   margin: 0.2rem 0 0.5rem 0;
   color: var(--color-accent);
   font-size: 1.05rem;
   line-height: 1.6;
 }
-.infoCol a {
+.contactInfoCol a {
   color: #0070f3;
   text-decoration: none;
   font-weight: 500;
 }
 
-.infoCol a:hover {
+.contactInfoCol a:hover {
   text-decoration: underline;
 }
 
