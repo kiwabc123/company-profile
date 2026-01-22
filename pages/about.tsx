@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us | Company Name</title>
+        <title>{`About Us | Company Name`}</title>
         <meta
           name="description"
           content="Learn more about Company Name, our history, customers, and vision."

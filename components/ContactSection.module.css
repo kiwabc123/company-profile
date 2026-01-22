@@ -1,0 +1,37 @@
+.contactSection {
+  padding: 5rem 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.75rem;
+  padding: 3rem;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+}
+
+.badge {
+  display: inline-block;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: #A1BC98;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+ul {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}

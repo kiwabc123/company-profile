@@ -1,0 +1,64 @@
+.contactSection {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(34,56,89,0.08);
+  padding: 2.5rem 2rem;
+}
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.infoCol {
+  background: #f7fafd;
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 1px 8px rgba(34,56,89,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.infoCol:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(34,56,89,0.12);
+}
+
+.infoCol h2 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.infoCol p {
+  margin: 0.2rem 0 0.5rem 0;
+  color: var(--color-accent);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.infoCol a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.infoCol a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .contactSection {
+    padding: 1.2rem 0.5rem;
+  }
+  .infoGrid {
+    gap: 1rem;
+  }
+}
