@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from './ContactSection.module.css';
-import { contactInfo } from '@/data/contact';
+import { contactInfo } from '../data/contact';
 
 const container = {
   hidden: { opacity: 0, y: 40 },
@@ -9,7 +9,7 @@ const container = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: 'easeOut',
+      ease: [0.42, 0, 0.58, 1], // cubic-bezier for 'easeOut'
       staggerChildren: 0.12,
     },
   },
@@ -61,9 +61,7 @@ export default function ContactSection() {
           <motion.li variants={item}>📱 Mobile: {contact.mobile}</motion.li>
           <motion.li variants={item}>💬 LINE: {contact.lineId}</motion.li>
           <motion.li variants={item}>✉️ {contact.email}</motion.li>
-          {contact.website && (
-            <motion.li variants={item}>🌐 {contact.website}</motion.li>
-          )}
+          {/* No website property in contactInfo.contact */}
         </motion.ul>
       </motion.div>
     </motion.section>
