@@ -41,7 +41,7 @@ export default function Contact() {
       </Head>
       <motion.section
         className={styles.contactSection}
-        initial={{ opacity: 0, y: 30 }}
+        initial={false}
         animate={mounted ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
