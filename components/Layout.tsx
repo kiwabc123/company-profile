@@ -19,6 +19,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Main navigation">
         <div className={styles['nav-left']}>
+          <div className={styles.logoBlock} aria-label="Logo">
+            {/* Logo image with fallback dummy block on error */}
+            {(() => {
+              const [imgError, setImgError] = React.useState(false);
+              return imgError ? (
+                <div style={{ width: 32, height: 32, background: '#D2DCB6', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#778873', fontWeight: 700, fontSize: 18 }}>
+                  LOGO
+                </div>
+              ) : (
+                <img
+                  src="/logo-placeholder.png"
+                  alt="Company Logo"
+                  style={{ width: 32, height: 32, objectFit: 'contain' }}
+                  onError={() => setImgError(true)}
+                />
+              );
+            })()}
+          </div>
           <motion.a
             href="/"
             initial={false}
