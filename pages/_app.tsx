@@ -6,7 +6,11 @@ import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)} mode="wait">
+    <AnimatePresence 
+               exitBeforeEnter
+                initial={false}
+                onExitComplete={() => window.scrollTo(0, 0)}
+        >
     <Layout>
       <Component {...pageProps} />
     </Layout></AnimatePresence>
