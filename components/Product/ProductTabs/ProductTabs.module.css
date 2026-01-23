@@ -11,10 +11,14 @@
   background: #fff;
   cursor: pointer;
   font-weight: 500;
+  color: var(--color-primary);
 }
 
-.active {
-  background: var(--color-primary);
+button.active {
+  background: #4C7A5A;
   color: #fff;
-  border-color: var(--color-primary);
+  border-color: #4C7A5A;
+  box-shadow: 0 2px 8px rgba(76,122,90,0.15);
+  transform: scale(1.04);
+  z-index: 1;
 }

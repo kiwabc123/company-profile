@@ -14,7 +14,7 @@ export default function ProductSection({
 
   return (
     <section style={{ marginBottom: '3rem' }}>
-      <h2>{title}</h2>
+      <h2 className={styles.sectionTitle}>{title}</h2>
       <div className={styles.productGrid}>
         {products.map((p) => (
           <ProductCard key={p.id} product={p} />
