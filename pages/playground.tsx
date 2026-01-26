@@ -1,4 +1,6 @@
+
 import React, { useRef, useState } from 'react';
+import { upload } from '@vercel/blob/client';
 
 export default function Playground() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
@@ -9,19 +11,20 @@ export default function Playground() {
     const file = e.target.files?.[0];
     if (!file) return;
     setUploading(true);
-    const reader = new FileReader();
-    reader.onloadend = async () => {
-      const base64 = reader.result;
-      const res = await fetch('/api/upload', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ file: base64 }),
-      });
-      const data = await res.json();
-      setImageUrl(data.url);
-      setUploading(false);
-    };
-    reader.readAsDataURL(file);
+    try {
+      const blob = await upload(
+        file.name,
+        file,
+        {
+          access: 'public',
+          handleUploadUrl: '/api/blob-upload',
+        }
+      );
+      setImageUrl(blob.url);
+    } catch (err: any) {
+      alert('Upload failed: ' + (err?.message || err));
+    }
+    setUploading(false);
   };
 
   return (
