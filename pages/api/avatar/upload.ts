@@ -1,6 +1,6 @@
 import { handleUpload, type HandleUploadBody } from '@vercel/blob/client';
 
-export default async function handler(req, res) {
+export default async function handler(req:any, res:any) {
   const body = req.body as HandleUploadBody;
   try {
     
