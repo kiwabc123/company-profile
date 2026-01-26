@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/blob": "^2.0.1",
     "framer-motion": "^12.27.1",
     "keen-slider": "^6.8.6",
     "next": "12.3.4",
@@ -22,6 +23,6 @@
     "typescript": "4.9.5"
   },
   "engines": {
-    "node": "24.x"
+    "node": "16.x"
   }
 }
