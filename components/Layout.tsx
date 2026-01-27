@@ -13,7 +13,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
     <Head>
       <title>{contactInfo.company.nameEN}</title>
-      <meta name="description" content="{contactInfo.company.business} company profile and product details" />
+      <meta name="description" content={`${contactInfo.company.business} company profile and product details`} />
+      <meta property="og:title" content={contactInfo.company.nameEN} />
+      <meta property="og:description" content={contactInfo.company.business} />
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <header className={styles.header}>
