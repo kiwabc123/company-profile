@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import 'keen-slider/keen-slider.min.css';
 
@@ -108,8 +109,19 @@ const DURATION = 5000
 
 
   return (
-    <div className={styles.container}>
-      <section className={styles.hero}>
+    <>
+      <Head>
+        <title>FAIR PRICE SUPPLY CO., LTD. | Hotel & Spa Supply Specialist</title>
+        <meta name="description" content="FAIR PRICE SUPPLY CO., LTD. is your trusted partner for premium hotel and spa supplies. Discover quality products to elevate guest experiences and support hospitality businesses." />
+        <meta name="keywords" content="hotel supply, spa supply, hospitality, guest amenities, wholesale, FAIR PRICE SUPPLY CO., LTD." />
+        <meta property="og:title" content="FAIR PRICE SUPPLY CO., LTD. | Hotel & Spa Supply Specialist" />
+        <meta property="og:description" content="Premium hotel and spa supplies for hospitality businesses. Trusted by hotels and spas for quality and value." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.fairpricesupply.com/" />
+        <meta property="og:image" content="/images/og-image.jpg" />
+      </Head>
+      <div className={styles.container}>
+        <section className={styles.hero}>
         <div className={styles.heroOverlay}>
           <h1 className={styles.title}>FAIR PRICE SUPPLY CO., LTD.</h1>
           <p className={styles.description}>
@@ -147,6 +159,7 @@ const DURATION = 5000
         </div>
       </section>
     </div>
+    </>
   );
 };
 
