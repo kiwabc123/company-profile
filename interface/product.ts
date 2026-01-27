@@ -7,10 +7,13 @@ export enum ProductArea {
   LOBBY = 'LOBBY',
   RESTAURANT = 'RESTAURANT',
   HOUSEKEEPING = 'HOUSEKEEPING',
+  BEDROOM="BEDROOM",
+  SPA="SPA",
 }
 
 export type Product = {
   id: string
+  code:string
   name: string
   slug: string              // SEO
   shortDescription: string
@@ -20,7 +23,7 @@ export type Product = {
   area: ProductArea[]       // ใช้ได้หลายพื้นที่
 
   images: string[]          // /images/products/xxx.jpg
-  thumbnail: string
+  thumbnail: {url: string; alt: string}
 
   specs?: ProductSpec[]     // optional แต่ดูโปรมาก
   features?: string[]       // bullet point

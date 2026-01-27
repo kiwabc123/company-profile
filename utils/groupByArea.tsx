@@ -6,6 +6,8 @@ export function groupByArea(products: Product[]) {
     LOBBY: [],
     RESTAURANT: [],
     HOUSEKEEPING: [],
+    BEDROOM: [],
+    SPA: [],
   }
 
   products.forEach((p) => {

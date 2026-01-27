@@ -111,9 +111,9 @@ const DURATION = 5000
     <div className={styles.container}>
       <section className={styles.hero}>
         <div className={styles.heroOverlay}>
-          <h1 className={styles.title}>Welcome to Company Name</h1>
+          <h1 className={styles.title}>FAIR PRICE SUPPLY CO., LTD.</h1>
           <p className={styles.description}>
-            We are a leading provider of innovative products and solutions. Learn more about our company and explore our featured products below.
+            Your trusted partner for premium hotel and spa supplies. Discover our wide range of quality products designed to elevate guest experiences and support hospitality businesses.
           </p>
         </div>
       </section>

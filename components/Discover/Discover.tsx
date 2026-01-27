@@ -25,7 +25,9 @@ export default function Discover({ items }: Props) {
         <img src={item.image} alt={item.title} loading="lazy" width={200} height={120} />
         <div className={styles.discoverOverlay}>
           <h3>{item.title}</h3>
-          <span>Explore 2</span>
+            <span>
+            Explore <span aria-hidden="true" style={{ display: 'inline-block', verticalAlign: 'middle' }}>&rarr;</span>
+            </span>
         </div>
       </a>
     ))}

@@ -17,7 +17,7 @@ export default function ProductDetailPage() {
       <div className={styles.gallery}>
         <img
           className={styles.mainImg}
-          src={mainImg}
+          src={typeof mainImg === 'string' ? mainImg : mainImg?.url}
           alt={product.name}
           loading="lazy"
           width={300}

@@ -11,7 +11,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <a className={styles.card}>
         <div className={styles.imageWrapper}>
           <img
-            src={mainImg}
+            src={typeof mainImg === 'string' ? mainImg : mainImg?.url}
             alt={product.name}
             loading="lazy"
             width={300}
@@ -46,9 +46,8 @@ export default function ProductCard({ product }: { product: Product }) {
                   setMainImg(img);
                 }}
                 aria-label={`Show image ${idx + 1}`}
-              >
+              > 
                 <img src={img} alt={product.name + ' thumbnail'} />
-                       <img src={img} alt={product.name + ' thumbnail'} loading="lazy" width={60} height={60} />
               </button>
             ))}
           </div>
