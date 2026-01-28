@@ -31,11 +31,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
                 </div>
               ) : (
                 <img
-                  src="/logo-placeholder.png"
+                  src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/logo/unnamed-removebg-preview-LRbRupkYx6PR36OuvV7LskRVf936bF.png"
                   alt="FAIR PRICE SUPPLY CO., LTD. Logo"
-                  width={32}
-                  height={32}
-                  style={{ width: 32, height: 32, objectFit: 'contain' }}
+                  width={40}
+                  height={40}
+                  style={{ width: 40, height: 40, objectFit: 'contain' }}
                   loading="lazy"
                   onError={() => setImgError(true)}
                 />
@@ -65,6 +65,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
             aria-label="Products"
           >
             Products
+          </motion.a>
+          <motion.a
+            href="/blog"
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }}
+            whileHover={{ scale: 1.12, color: "#778873" }}
+            whileTap={{ scale: 0.96 }}
+            aria-label="Blog"
+          >
+            Blog
           </motion.a>
           <motion.a
             href="/about"

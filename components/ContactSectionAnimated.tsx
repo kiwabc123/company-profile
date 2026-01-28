@@ -72,6 +72,15 @@ export default function ContactSectionAnimated() {
           <p>Line ID: {contactInfo.contact.lineId}</p>
           <p>Email: <a href={`mailto:${contactInfo.contact.email}`}>{contactInfo.contact.email}</a></p>
         </div>
+        <div></div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24 }}>
+          <img
+            src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/logo/unnamed-removebg-preview-LRbRupkYx6PR36OuvV7LskRVf936bF.png"
+            alt="Company Logo"
+            style={{ width: 120, height: 120, objectFit: 'contain', aspectRatio: '1 / 1', display: 'block' }}
+            loading="lazy"
+          />
+        </div>
       </div>
     </motion.main>
   );
