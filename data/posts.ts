@@ -510,40 +510,40 @@ const posts: BlogPostType[] = [
 posts.forEach(post => {
     switch (post.slug) {
         case 'why-hotels-use-white-bed-sheets':
-            post.title += ' 🏨🛏️✨';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 🛏️';
             break;
         case 'spa-towel-care-tips':
-            post.title += ' 🧖‍♀️🧺🌿';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 🧖‍♀️';
             break;
         case 'eco-friendly-amenities':
-            post.title += ' 🌱🏨♻️';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 🌱';
             break;
         case 'hotel-white-bed-sheets-cleanliness-trust':
-            post.title += ' 🛏️🤍👍';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 🤍';
             break;
         case 'hotel-bed-sheet-white-maintenance-cost':
-            post.title += ' 🧼💸🤔';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 💸';
             break;
         case 'white-vs-color-bed-sheet-hotel':
-            post.title += ' ⚪️🆚🎨';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' ⚪️';
             break;
         case 'hotel-bed-sheet-vs-home-bed-sheet':
-            post.title += ' 🏨🏠🔍';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 🏨';
             break;
         case 'how-to-choose-hotel-bed-sheets':
-            post.title += ' 🛏️✅💡';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 💡';
             break;
         case 'hotel-bed-sheet-grade-and-thread-count':
-            post.title += ' 🧵📏🏨';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 🧵';
             break;
         case 'hotel-bed-sheet-size-and-custom-made':
-            post.title += ' 📐🛏️✂️';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' 📐';
             break;
         case 'hotel-bed-sheet-cost-vs-quality':
-            post.title += ' 💰⚖️👌';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' ⚖️';
             break;
         case 'hotel-bed-sheet-impact-on-guest-experience':
-            post.title += ' 😊🛏️⭐';
+            post.title = post.title.replace(/[\s\S]*?(?= )/, '').trim() + ' ⭐';
             break;
         default:
             break;
