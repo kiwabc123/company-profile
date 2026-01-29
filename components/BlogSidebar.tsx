@@ -1,5 +1,5 @@
 import React from 'react';
-import { posts } from '../data/posts';
+import posts from '../data/posts';
 
 interface BlogSidebarProps {
   selectedSlug: string;

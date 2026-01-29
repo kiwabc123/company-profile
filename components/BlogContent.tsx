@@ -1,6 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import { posts } from '../data/posts';
+import posts from '../data/posts';
 
 interface BlogContentProps {
   slug: string;
