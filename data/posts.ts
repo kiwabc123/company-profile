@@ -507,5 +507,47 @@ const posts: BlogPostType[] = [
 `,
     },
 ];
+posts.forEach(post => {
+    switch (post.slug) {
+        case 'why-hotels-use-white-bed-sheets':
+            post.title += ' 🏨🛏️✨';
+            break;
+        case 'spa-towel-care-tips':
+            post.title += ' 🧖‍♀️🧺🌿';
+            break;
+        case 'eco-friendly-amenities':
+            post.title += ' 🌱🏨♻️';
+            break;
+        case 'hotel-white-bed-sheets-cleanliness-trust':
+            post.title += ' 🛏️🤍👍';
+            break;
+        case 'hotel-bed-sheet-white-maintenance-cost':
+            post.title += ' 🧼💸🤔';
+            break;
+        case 'white-vs-color-bed-sheet-hotel':
+            post.title += ' ⚪️🆚🎨';
+            break;
+        case 'hotel-bed-sheet-vs-home-bed-sheet':
+            post.title += ' 🏨🏠🔍';
+            break;
+        case 'how-to-choose-hotel-bed-sheets':
+            post.title += ' 🛏️✅💡';
+            break;
+        case 'hotel-bed-sheet-grade-and-thread-count':
+            post.title += ' 🧵📏🏨';
+            break;
+        case 'hotel-bed-sheet-size-and-custom-made':
+            post.title += ' 📐🛏️✂️';
+            break;
+        case 'hotel-bed-sheet-cost-vs-quality':
+            post.title += ' 💰⚖️👌';
+            break;
+        case 'hotel-bed-sheet-impact-on-guest-experience':
+            post.title += ' 😊🛏️⭐';
+            break;
+        default:
+            break;
+    }
+});
 
 export default posts;
