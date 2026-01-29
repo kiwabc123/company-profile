@@ -30,31 +30,67 @@ const BlogIndex = () => {
           gap: 32,
         }}>
           {/* Left: Blog List */}
-          <nav aria-label="Blog articles" style={{ flex: '0 0 30%', borderRight: '1px solid #f5f5f5', paddingRight: 24, maxHeight: 600, overflowY: 'auto' }}>
+          <nav
+            aria-label="Blog articles"
+            style={{
+              flex: '0 0 30%',
+              borderRight: '1px solid #f5f5f5',
+              paddingRight: 24,
+              maxHeight: 600,
+              overflowY: 'auto',
+            }}
+          >
             <h2 style={{ fontSize: 22, marginBottom: 16 }}>Articles</h2>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              {posts.map(post => (
-                <li key={post.slug} style={{ marginBottom: 24 }}>
+              {posts.map((post) => (
+                <li
+                  key={post.slug}
+                  style={{
+                    marginBottom: 24,
+                    background: selected === post.slug ? '#f5f9f6' : '#fff',
+                    border: selected === post.slug
+                      ? '2px solid #b7d7c9'
+                      : '1px solid #eee',
+                    borderRadius: 10,
+                    boxShadow:
+                      selected === post.slug
+                        ? '0 2px 8px rgba(119, 136, 115, 0.08)'
+                        : '0 1px 4px rgba(0,0,0,0.03)',
+                    transition: 'box-shadow 0.2s, border 0.2s, background 0.2s',
+                    padding: '16px 14px 10px 14px',
+                  }}
+                >
                   <button
                     style={{
-                      background: selected === post.slug ? '#f5f5f5' : 'none',
+                      background: 'none',
                       border: 'none',
                       textAlign: 'left',
                       width: '100%',
-                      padding: '8px 0',
-                      fontWeight: selected === post.slug ? 700 : 400,
-                      color: selected === post.slug ? '#778873' : '#222',
+                      fontWeight: selected === post.slug ? 700 : 500,
+                      color: selected === post.slug ? '#4b6b50' : '#222',
                       fontSize: 18,
                       cursor: 'pointer',
                       borderRadius: 4,
-                      transition: 'background 0.2s',
+                      outline: 'none',
+                      padding: 0,
+                      marginBottom: 4,
                     }}
                     onClick={() => setSelected(post.slug)}
                     aria-current={selected === post.slug ? 'page' : undefined}
                   >
                     {post.title}
                   </button>
-                  <p style={{ margin: '4px 0 0 0', color: '#bbb', fontSize: 12, fontStyle: 'italic', lineHeight: 1.3 }}>{post.summary}</p>
+                  <p
+                    style={{
+                      margin: '4px 0 0 0',
+                      color: '#7a8b7a',
+                      fontSize: 13,
+                      fontStyle: 'italic',
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {post.summary}
+                  </p>
                 </li>
               ))}
             </ul>
