@@ -1,3 +1,17 @@
+/* Pure CSS fade-in stagger animation for contact cards */
+.fadeInStagger {
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--stagger, 0) * 0.18s + 0.1s);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 .contactSection {
   max-width: 900px;
   margin: 3rem auto;
