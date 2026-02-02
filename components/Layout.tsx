@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
+
 import { contactInfo } from './ContactSectionAnimated';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -8,24 +9,30 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-
-const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <>
-    <Head>
-      <title>{contactInfo.company.nameEN}</title>
-      <meta name="description" content={`${contactInfo.company.business} company profile and product details`} />
-      <meta property="og:title" content={contactInfo.company.nameEN} />
-      <meta property="og:description" content={contactInfo.company.business} />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <header className={styles.header}>
-      <nav className={styles.nav} aria-label="Main navigation">
-        <div className={styles['nav-left']}>
-          <div className={styles.logoBlock} aria-label="Logo">
-            {/* Logo image with fallback dummy block on error, SEO optimized */}
-            {(() => {
-              const [imgError, setImgError] = React.useState(false);
-              return imgError ? (
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [imgError, setImgError] = useState(false);
+  // Close mobile nav when scrolling
+  useEffect(() => {
+    if (!mobileNavOpen) return;
+    const handleScroll = () => setMobileNavOpen(false);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [mobileNavOpen]);
+  return (
+    <>
+      <Head>
+        <title>{contactInfo.company.nameEN}</title>
+        <meta name="description" content={`${contactInfo.company.business} company profile and product details`} />
+        <meta property="og:title" content={contactInfo.company.nameEN} />
+        <meta property="og:description" content={contactInfo.company.business} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <header className={styles.header}>
+        <nav className={styles.nav + ' ' + styles.hideOnMobile} aria-label="Main navigation">
+          <div className={styles['nav-left']}>
+            <div className={styles.logoBlock} aria-label="Logo">
+              {imgError ? (
                 <div style={{ width: 32, height: 32, background: '#D2DCB6', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#778873', fontWeight: 700, fontSize: 18 }}>
                   LOGO
                 </div>
@@ -39,92 +46,77 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
                   loading="lazy"
                   onError={() => setImgError(true)}
                 />
-              );
-            })()}
+              )}
+            </div>
+            <motion.a
+              href="/"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 120 }}
+              whileHover={{ scale: 1.08, color: "#778873" }}
+              whileTap={{ scale: 0.96 }}
+              aria-label="Home"
+            >
+              {contactInfo.company.nameEN}
+            </motion.a>
           </div>
-          <motion.a
-            href="/"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 120 }}
-            whileHover={{ scale: 1.08, color: "#778873" }}
-            whileTap={{ scale: 0.96 }}
-            aria-label="Home"
+          <div className={styles['nav-right']}>
+            <motion.a href="/products" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Products">Products</motion.a>
+            <motion.a href="/blog" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Blog">Blog</motion.a>
+            <motion.a href="/about" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="About">About</motion.a>
+            <motion.a href="/contact" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Contact">Contact</motion.a>
+          </div>
+          {/* Hamburger button for mobile */}
+          <button
+            className={styles.mobileNavToggle + ' ' + styles.hideOnDesktop}
+            aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileNavOpen}
+            aria-controls="mobile-nav-overlay"
+            onClick={() => setMobileNavOpen((v) => !v)}
           >
-            {contactInfo.company.nameEN}
-          </motion.a>
+            <span className={styles.hamburger}>
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
+        </nav>
+        {/* Mobile nav overlay */}
+        {mobileNavOpen && (
+          <div className={styles.mobileNavOverlay} id="mobile-nav-overlay" role="dialog" aria-modal="true">
+            <nav className={styles.mobileNavMenu}>
+              <a href="/products" onClick={() => setMobileNavOpen(false)}>Products</a>
+              <a href="/blog" onClick={() => setMobileNavOpen(false)}>Blog</a>
+              <a href="/about" onClick={() => setMobileNavOpen(false)}>About</a>
+              <a href="/contact" onClick={() => setMobileNavOpen(false)}>Contact</a>
+            </nav>
+          </div>
+        )}
+      </header>
+      <main className={styles.main}>{children}</main>
+      <footer className={styles.footer}>
+        <div className={styles.footerGrid}>
+          <div className={styles.footerCol}>
+            <strong>{contactInfo.company.nameEN}</strong><br />
+            <span>{contactInfo.company.nameTH}</span><br />
+            &copy; {new Date().getFullYear()} {contactInfo.company.nameEN}. All rights reserved.
+          </div>
+          <div className={styles.footerCol}>
+            <strong>Address</strong><br />
+            {contactInfo.address.en}<br />
+            {contactInfo.address.th}
+          </div>
+          <div className={styles.footerCol}>
+            <strong>Contact</strong><br />
+            Email: <a href={`mailto:${contactInfo.contact.email}`}>{contactInfo.contact.email}</a><br />
+            Tel/Fax: {contactInfo.contact.telFax}<br />
+            Mobile: {contactInfo.contact.mobile}<br />
+            Line ID: {contactInfo.contact.lineId}
+          </div>
         </div>
-        <div className={styles['nav-right']}>
-          <motion.a
-            href="/products"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }}
-            whileHover={{ scale: 1.12, color: "#778873" }}
-            whileTap={{ scale: 0.96 }}
-            aria-label="Products"
-          >
-            Products
-          </motion.a>
-          <motion.a
-            href="/blog"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }}
-            whileHover={{ scale: 1.12, color: "#778873" }}
-            whileTap={{ scale: 0.96 }}
-            aria-label="Blog"
-          >
-            Blog
-          </motion.a>
-          <motion.a
-            href="/about"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }}
-            whileHover={{ scale: 1.12, color: "#778873" }}
-            whileTap={{ scale: 0.96 }}
-            aria-label="About"
-          >
-            About
-          </motion.a>
-          <motion.a
-            href="/contact"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }}
-            whileHover={{ scale: 1.12, color: "#778873" }}
-            whileTap={{ scale: 0.96 }}
-            aria-label="Contact"
-          >
-            Contact
-          </motion.a>
-        </div>
-      </nav>
-    </header>
-    <main className={styles.main}>{children}</main>
-    <footer className={styles.footer}>
-      <div className={styles.footerGrid}>
-        <div className={styles.footerCol}>
-          <strong>{contactInfo.company.nameEN}</strong><br />
-          <span>{contactInfo.company.nameTH}</span><br />
-          &copy; {new Date().getFullYear()} {contactInfo.company.nameEN}. All rights reserved.
-        </div>
-        <div className={styles.footerCol}>
-          <strong>Address</strong><br />
-          {contactInfo.address.en}<br />
-          {contactInfo.address.th}
-        </div>
-        <div className={styles.footerCol}>
-          <strong>Contact</strong><br />
-          Email: <a href={`mailto:${contactInfo.contact.email}`}>{contactInfo.contact.email}</a><br />
-          Tel/Fax: {contactInfo.contact.telFax}<br />
-          Mobile: {contactInfo.contact.mobile}<br />
-          Line ID: {contactInfo.contact.lineId}
-        </div>
-      </div>
-    </footer>
-  </>
-);
+      </footer>
+    </>
+  );
+};
 
 export default Layout;
