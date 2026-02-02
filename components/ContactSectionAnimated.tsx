@@ -1,10 +1,17 @@
 'use client'
 
 import styles from '../styles/Contact.module.css'
-import { motion, Variants } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import {
+  motion,
+  Variants,
+  useInView,
+  useReducedMotion,
+} from 'framer-motion'
+import { useRef } from 'react'
 export const contactInfo = { company: { nameTH: 'บริษัท แฟร์ไพรซ์ซัพพลาย จำกัด', nameEN: 'FAIR PRICE SUPPLY CO., LTD.', business: 'Hotel Amenity', }, person: { nameTH: 'สมศักดิ์ หลุทวเสรีประกาย', nameEN: 'SOMSAK LEUTHAVESRIPRAKAY', nickname: 'TOM', }, address: { th: '551 ถ.ริมทางรถไฟ แขวงบางยี่เรือ เขตธนบุรี กรุงเทพฯ 10600', en: '551 RIMTANGRODFAI Rd., BANGYERAE, THONBURI, BANGKOK 10600 THAILAND', }, contact: { telFax: '+66 2-890-5633', mobile: '+66 81-622-2323', lineId: 'tom_tafe', email: 'contact@fairprice.com', }, };
 
+export default function ContactSectionAnimated() {
+  const ref = useRef(null)
 const containerVariants: Variants = {
   hidden: {},
   show: {
@@ -17,7 +24,7 @@ const containerVariants: Variants = {
 const itemVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 30,
+    y: 32,
   },
   show: {
     opacity: 1,
@@ -29,19 +36,28 @@ const itemVariants: Variants = {
   },
 }
 
-export default function ContactSectionAnimated() {
-  const [mounted, setMounted] = useState(false)
+  // 👀 ตรวจว่า scroll มาถึงจริงไหม
+  const isInView = useInView(ref, {
+    once: true,
+    margin: '-80px', // เผื่อ trigger ก่อนเห็นนิดเดียว (ปลอดภัย)
+  })
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // ♿ ตรวจ prefers-reduced-motion
+  const reduceMotion = useReducedMotion()
 
   return (
     <motion.main
+      ref={ref}
       className={styles.contactSection}
       variants={containerVariants}
       initial="hidden"
-      animate={mounted ? 'show' : 'hidden'}
+      animate={
+        reduceMotion
+          ? 'show'          // ไม่ animate → แสดงทันที
+          : isInView
+          ? 'show'          // scroll ถึง → animate
+          : 'hidden'
+      }
     >
       <motion.h1
         className={styles.title}
