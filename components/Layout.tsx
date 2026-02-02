@@ -5,6 +5,7 @@ import { contactInfo } from './ContactSectionAnimated';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import styles from '../styles/Layout.module.css';
+import Link from 'next/link';
 
 interface LayoutProps {
   children: ReactNode;
@@ -50,23 +51,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 />
               )}
             </div>
-            <motion.a
-              href="/"
-              initial={false}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 120 }}
-              whileHover={{ scale: 1.08, color: "#778873" }}
-              whileTap={{ scale: 0.96 }}
-              aria-label="Home"
-            >
-              {contactInfo.company.nameEN}
-            </motion.a>
+            <Link href="/" passHref legacyBehavior>
+              <motion.a
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 120 }}
+                whileHover={{ scale: 1.08, color: "#778873" }}
+                whileTap={{ scale: 0.96 }}
+                aria-label="Home"
+              >
+                {contactInfo.company.nameEN}
+              </motion.a>
+            </Link>
           </div>
           <div className={styles['nav-right']}>
-            <motion.a href="/products" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Products">Products</motion.a>
-            <motion.a href="/blog" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Blog">Blog</motion.a>
-            <motion.a href="/about" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="About">About</motion.a>
-            <motion.a href="/contact" initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Contact">Contact</motion.a>
+            <Link href="/products" passHref legacyBehavior>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Products">Products</motion.a>
+            </Link>
+            <Link href="/blog" passHref legacyBehavior>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Blog">Blog</motion.a>
+            </Link>
+            <Link href="/about" passHref legacyBehavior>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="About">About</motion.a>
+            </Link>
+            <Link href="/contact" passHref legacyBehavior>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Contact">Contact</motion.a>
+            </Link>
           </div>
           {/* Hamburger button for mobile */}
           <button
@@ -87,26 +97,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {mobileNavOpen && (
           <div className={styles.mobileNavOverlay} id="mobile-nav-overlay" role="dialog" aria-modal="true">
             <nav className={styles.mobileNavMenu}>
-              <a
-                href="/products"
-                className={router.pathname === '/products' ? styles.activeTab : styles.tab}
-                onClick={() => setMobileNavOpen(false)}
-              >Products</a>
-              <a
-                href="/blog"
-                className={router.pathname === '/blog' ? styles.activeTab : styles.tab}
-                onClick={() => setMobileNavOpen(false)}
-              >Blog</a>
-              <a
-                href="/about"
-                className={router.pathname === '/about' ? styles.activeTab : styles.tab}
-                onClick={() => setMobileNavOpen(false)}
-              >About</a>
-              <a
-                href="/contact"
-                className={router.pathname === '/contact' ? styles.activeTab : styles.tab}
-                onClick={() => setMobileNavOpen(false)}
-              >Contact</a>
+                <Link href="/products" legacyBehavior>
+                  <a
+                    className={router.pathname === '/products' ? styles.activeTab : styles.tab}
+                    onClick={() => setMobileNavOpen(false)}
+                  >Products</a>
+                </Link>
+                <Link href="/blog" legacyBehavior>
+                  <a
+                    className={router.pathname === '/blog' ? styles.activeTab : styles.tab}
+                    onClick={() => setMobileNavOpen(false)}
+                  >Blog</a>
+                </Link>
+                <Link href="/about" legacyBehavior>
+                  <a
+                    className={router.pathname === '/about' ? styles.activeTab : styles.tab}
+                    onClick={() => setMobileNavOpen(false)}
+                  >About</a>
+                </Link>
+                <Link href="/contact" legacyBehavior>
+                  <a
+                    className={router.pathname === '/contact' ? styles.activeTab : styles.tab}
+                    onClick={() => setMobileNavOpen(false)}
+                  >Contact</a>
+                </Link>
             </nav>
           </div>
         )}
