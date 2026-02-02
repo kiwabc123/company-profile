@@ -30,6 +30,7 @@ export default function ContactSectionAnimated() {
 
   return (
     <motion.main
+      key={mounted ? 'show' : 'hide'}
       className={styles.contactSection}
       initial={false}              // 🔥 สำคัญมาก
       animate={mounted && !reduceMotion ? 'show' : 'show'}
