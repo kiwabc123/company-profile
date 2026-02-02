@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React, { ReactNode, useState, useEffect } from 'react';
 
 import { contactInfo } from './ContactSectionAnimated';
@@ -10,6 +11,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
   // Close mobile nav when scrolling
@@ -74,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             aria-controls="mobile-nav-overlay"
             onClick={() => setMobileNavOpen((v) => !v)}
           >
-            <span className={styles.hamburger}>
+            <span className={styles.hamburger + (mobileNavOpen ? ' ' + styles.active : '')}>
               <span />
               <span />
               <span />
@@ -85,10 +87,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {mobileNavOpen && (
           <div className={styles.mobileNavOverlay} id="mobile-nav-overlay" role="dialog" aria-modal="true">
             <nav className={styles.mobileNavMenu}>
-              <a href="/products" onClick={() => setMobileNavOpen(false)}>Products</a>
-              <a href="/blog" onClick={() => setMobileNavOpen(false)}>Blog</a>
-              <a href="/about" onClick={() => setMobileNavOpen(false)}>About</a>
-              <a href="/contact" onClick={() => setMobileNavOpen(false)}>Contact</a>
+              <a
+                href="/products"
+                className={router.pathname === '/products' ? styles.activeTab : styles.tab}
+                onClick={() => setMobileNavOpen(false)}
+              >Products</a>
+              <a
+                href="/blog"
+                className={router.pathname === '/blog' ? styles.activeTab : styles.tab}
+                onClick={() => setMobileNavOpen(false)}
+              >Blog</a>
+              <a
+                href="/about"
+                className={router.pathname === '/about' ? styles.activeTab : styles.tab}
+                onClick={() => setMobileNavOpen(false)}
+              >About</a>
+              <a
+                href="/contact"
+                className={router.pathname === '/contact' ? styles.activeTab : styles.tab}
+                onClick={() => setMobileNavOpen(false)}
+              >Contact</a>
             </nav>
           </div>
         )}

@@ -1,3 +1,24 @@
+.tab {
+  padding: 0.5rem 1rem;
+}
+.activeTab {
+  color: #fff !important;
+  background: #A1BC98;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(34,56,89,0.10);
+}
+/* Active state for hamburger button */
+.mobileNavToggle.active,
+.mobileNavToggle:active {
+  background: #e6f0e6;
+  box-shadow: 0 2px 8px rgba(34,56,89,0.18);
+  border: 2px solid #A1BC98;
+}
+.hamburger.active span {
+  background: #A1BC98;
+}
 /* Utility: hide on mobile, show on desktop */
 .hideOnMobile {
   display: block;
@@ -39,6 +60,19 @@
   width: 28px;
   height: 22px;
   position: relative;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
 }
 .hamburger span {
   display: block;
@@ -57,9 +91,15 @@
 @media (max-width: 900px) {
   .mobileNavToggle {
     display: block;
-    position: static;
-    top: unset;
-    right: unset;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    left: unset;
+    z-index: 202;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(34,56,89,0.10);
+    padding: 0.7rem;
     float: none;
   }
   .desktopNav {
