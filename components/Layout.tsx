@@ -26,7 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <meta name="description" content={`${contactInfo.company.business} company profile and product details`} />
         <meta property="og:title" content={contactInfo.company.nameEN} />
         <meta property="og:description" content={contactInfo.company.business} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/logo/unnamed-removebg-preview-LRbRupkYx6PR36OuvV7LskRVf936bF.png" />
       </Head>
       <header className={styles.header}>
         <nav className={styles.nav + ' ' + styles.hideOnMobile} aria-label="Main navigation">
