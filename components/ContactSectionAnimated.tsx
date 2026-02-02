@@ -10,8 +10,6 @@ import {
 import { useRef } from 'react'
 export const contactInfo = { company: { nameTH: 'บริษัท แฟร์ไพรซ์ซัพพลาย จำกัด', nameEN: 'FAIR PRICE SUPPLY CO., LTD.', business: 'Hotel Amenity', }, person: { nameTH: 'สมศักดิ์ หลุทวเสรีประกาย', nameEN: 'SOMSAK LEUTHAVESRIPRAKAY', nickname: 'TOM', }, address: { th: '551 ถ.ริมทางรถไฟ แขวงบางยี่เรือ เขตธนบุรี กรุงเทพฯ 10600', en: '551 RIMTANGRODFAI Rd., BANGYERAE, THONBURI, BANGKOK 10600 THAILAND', }, contact: { telFax: '+66 2-890-5633', mobile: '+66 81-622-2323', lineId: 'tom_tafe', email: 'contact@fairprice.com', }, };
 
-export default function ContactSectionAnimated() {
-  const ref = useRef(null)
 const containerVariants: Variants = {
   hidden: {},
   show: {
@@ -36,13 +34,9 @@ const itemVariants: Variants = {
   },
 }
 
-  // 👀 ตรวจว่า scroll มาถึงจริงไหม
-  const isInView = useInView(ref, {
-    once: true,
-    margin: '-80px', // เผื่อ trigger ก่อนเห็นนิดเดียว (ปลอดภัย)
-  })
-
-  // ♿ ตรวจ prefers-reduced-motion
+export default function ContactSectionAnimated() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-80px' })
   const reduceMotion = useReducedMotion()
 
   return (
@@ -51,25 +45,14 @@ const itemVariants: Variants = {
       className={styles.contactSection}
       variants={containerVariants}
       initial="hidden"
-      animate={
-        reduceMotion
-          ? 'show'          // ไม่ animate → แสดงทันที
-          : isInView
-          ? 'show'          // scroll ถึง → animate
-          : 'hidden'
-      }
+      animate={reduceMotion || isInView ? 'show' : 'hidden'}
     >
-      <motion.h1
-        className={styles.title}
-        variants={itemVariants}
-      >
+      <motion.h1 className={styles.title} variants={itemVariants}>
         Contact Us
       </motion.h1>
 
-      <motion.div
-        className={styles.infoGrid}
-        variants={containerVariants}
-      >
+      {/* ❗ ไม่ต้องเป็น container */}
+      <div className={styles.infoGrid}>
         <motion.div className={styles.contactInfoCol} variants={itemVariants}>
           <h2>Company</h2>
           <p><strong>บริษัท แฟร์ไพรซ์ซัพพลาย จำกัด</strong></p>
@@ -106,7 +89,7 @@ const itemVariants: Variants = {
             height={120}
           />
         </motion.div>
-      </motion.div>
+      </div>
     </motion.main>
   )
 }
