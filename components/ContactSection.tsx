@@ -1,3 +1,4 @@
+'use client'
 import { motion } from 'framer-motion';
 import styles from './ContactSection.module.css';
 import { contactInfo } from '../data/contact';
@@ -32,10 +33,14 @@ export default function ContactSection() {
     >
       <motion.h2 variants={item} className={styles.title}>Contact Us</motion.h2>
       <motion.div
+        key="contact-card"
         className={styles.card}
         variants={item}
         whileHover={{ scale: 1.02 }}
         transition={{ type: 'spring', stiffness: 120 }}
+        whileInView="show"
+        initial="hidden"
+        viewport={{ once: true }}
       >
         <motion.h3 variants={item}>{company.nameEN}</motion.h3>
         <motion.p variants={item}>{company.nameTH}</motion.p>
@@ -43,14 +48,26 @@ export default function ContactSection() {
           {company.business}
         </motion.span>
         <motion.hr variants={item} />
-        <motion.div variants={item}>
+        <motion.div
+          key="contact-person"
+          variants={item}
+          whileInView="show"
+          initial="hidden"
+          viewport={{ once: true }}
+        >
           <strong>Contact Person</strong>
           <p>
             {person.nameEN} ({person.nickname})<br />
             {person.nameTH}
           </p>
         </motion.div>
-        <motion.div variants={item}>
+        <motion.div
+          key="contact-address"
+          variants={item}
+          whileInView="show"
+          initial="hidden"
+          viewport={{ once: true }}
+        >
           <strong>Address</strong>
           <p>{address.en}</p>
           <p>{address.th}</p>
