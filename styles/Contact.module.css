@@ -24,7 +24,6 @@
   border-radius: 1rem;
   padding: 1.2rem 1rem;
   box-shadow: 0 1px 8px rgba(34,56,89,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contactInfoCol:hover {
