@@ -1,3 +1,70 @@
+.flexRow {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.infoCol {
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 480px;
+  z-index: 1;
+}
+
+.mapCol {
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 480px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mapWrapper {
+  margin: 2.5rem auto 0 auto;
+  max-width: 700px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(34,56,89,0.10);
+}
+.infoGridWrapper {
+  position: relative;
+}
+
+.watermarkLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.10;
+  pointer-events: none;
+  user-select: none;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.watermarkLogo img {
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  max-height: 320px;
+  filter: grayscale(100%);
+}
+
+.ctaButton {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
 /* Pure CSS fade-in stagger animation for contact cards */
 .fadeInStagger {
   opacity: 0;
@@ -18,7 +85,7 @@
   background: #fff;
   border-radius: 1.5rem;
   box-shadow: 0 2px 16px rgba(34,56,89,0.08);
-  padding: 2.5rem 2rem;
+  padding: 6rem 2rem 2.5rem 2rem; /* top, right, bottom, left */
 }
 .title {
   font-size: 2.2rem;
@@ -32,6 +99,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 .contactInfoCol {
   background: #f7fafd;
@@ -67,9 +136,71 @@
   text-decoration: underline;
 }
 
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #f5faff, #eef5ff);
+  border-radius: 2.5em;
+  box-shadow: 0 2px 12px rgba(0,112,243,0.06);
+  padding: 1.2em 0.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  background: linear-gradient(90deg, #009688 0%, #4caf50 100%);
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 1em 2.2em;
+  border-radius: 2.5em;
+  box-shadow: 0 4px 18px rgba(76,175,80,0.13);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
+  margin: 0.2em 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  min-width: 120px;
+  justify-content: center;
+}
+.ctaBtn:hover, .ctaBtn:focus {
+  background: linear-gradient(90deg, #388e3c 0%, #009688 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 32px rgba(76,175,80,0.18);
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .cta {
+    gap: 1rem;
+    padding: 1em 0.2em;
+  }
+  .ctaBtn {
+    font-size: 1.05rem;
+    padding: 0.85em 1.2em;
+    min-width: 90px;
+  }
+}
 @media (max-width: 700px) {
   .contactSection {
     padding: 1.2rem 0.5rem;
+  }
+  .flexRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .infoCol, .mapCol {
+    max-width: 100%;
+    min-width: 0;
   }
   .infoGrid {
     gap: 1rem;
