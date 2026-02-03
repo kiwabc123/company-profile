@@ -122,15 +122,27 @@ const DURATION = 5000
       </Head>
       <div className={styles.container}>
         <section className={styles.hero}>
-        <div className={styles.heroOverlay}>
-          <h1 className={styles.title}>FAIR PRICE SUPPLY CO., LTD.</h1>
-          <p className={styles.description}>
-            Your trusted partner for premium hotel and spa supplies. Discover our wide range of quality products designed to elevate guest experiences and support hospitality businesses.
-          </p>
+          <div className={styles.heroOverlay}>
+            <h1 className={styles.title}>Hotel & Resort Supply Specialist</h1>
+            <p className={styles.description}>
+              Supplying hotels, resorts, and spas with quality linens, amenities, and hospitality essentials.<br />
+              <span style={{ fontWeight: 500, color: '#b2d8b2', fontSize: '1.08rem', display: 'block', marginTop: '0.7em' }}>
+                Trusted by leading hospitality businesses across Thailand.
+              </span>
+            </p>
+            <a href="/products" className={styles.heroCta}>
+              View Products
+            </a>
+          </div>
+        </section>
+      <section className={styles.aboutStrip}>
+        <div className={styles.aboutProof}>
+          <span>10+ Years Experience</span>
+          <span>| Hotel & Spa Focus</span>
+          <span>| Wholesale Supply</span>
         </div>
       </section>
-       <section className={styles.fullScreen}><Detail></Detail> </section>
-      
+
       <Discover items={discoverItems} />
 
       <section className={styles.products}>

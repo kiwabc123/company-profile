@@ -103,15 +103,16 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.15),
-    transparent
+    rgba(0, 150, 136, 0.65) 0%,
+    rgba(76, 175, 80, 0.35) 60%,
+    rgba(0,0,0,0.10) 100%
   );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem;
   color: #fff;
+  transition: background 0.3s;
 }
 
 .discoverOverlay h3 {
@@ -126,4 +127,13 @@
 
 .discoverCard:hover img {
   transform: scale(1.08);
+  filter: brightness(1.08) saturate(1.1);
+}
+.discoverCard:hover .discoverOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(76, 175, 80, 0.75) 0%,
+    rgba(0, 150, 136, 0.45) 60%,
+    rgba(0,0,0,0.18) 100%
+  );
 }

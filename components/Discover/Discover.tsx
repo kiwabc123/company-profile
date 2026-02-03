@@ -26,7 +26,7 @@ export default function Discover({ items }: Props) {
         <div className={styles.discoverOverlay}>
           <h3>{item.title}</h3>
             <span>
-            Explore <span aria-hidden="true" style={{ display: 'inline-block', verticalAlign: 'middle' }}>&rarr;</span>
+            View products <span aria-hidden="true" style={{ display: 'inline-block', verticalAlign: 'middle' }}>&rarr;</span>
             </span>
         </div>
       </a>
