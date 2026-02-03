@@ -12,7 +12,7 @@
 - **Config:**
   - `next.config.js`: Next.js config (strict mode, SWC minify)
   - `tsconfig.json`: TypeScript config (strict, noEmit)
-  - `package.json`: Scripts, dependencies, Node 16.x required
+  - `package.json`: Scripts, dependencies, Node 24.x required
 
 ## Key Workflows
 - **Development:**
@@ -40,7 +40,7 @@
 - **External:**
   - Only core Next.js, React, and TypeScript dependencies
   - No custom middleware, state management, or API integrations present
-- **Node version:** 16.x (see `package.json`)
+- **Node version:** 24.x (see `package.json`)
 
 ## Examples
 - To add a new page: create `pages/about.tsx` → accessible at `/about`
