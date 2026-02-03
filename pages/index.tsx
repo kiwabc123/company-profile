@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import 'keen-slider/keen-slider.min.css';
 
@@ -121,8 +122,21 @@ const DURATION = 5000
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
       <div className={styles.container}>
-        <section className={styles.hero}>
-          <div className={styles.heroOverlay}>
+          <section className={styles.hero} style={{ position: 'relative', width: '100vw', minHeight: '100vh', overflow: 'hidden' }}>
+            {/* LCP image: immediately discoverable, not lazy, fetchpriority=high */}
+            <Image
+              src="/images/home-hero.jpg"
+              alt="Hotel & Resort Supply Specialist - LCP Hero"
+              height={'100%'}
+              width={'100%'}
+              layout='fill'
+              style={{
+                objectFit: 'cover',
+                zIndex: 0,
+              }}
+              priority
+            />
+          <div className={styles.heroOverlay} style={{ position: 'relative', zIndex: 1 }}>
             <h1 className={styles.title}>Hotel & Resort Supply Specialist</h1>
             <p className={styles.description}>
               Supplying hotels, resorts, and spas with quality linens, amenities, and hospitality essentials.<br />
