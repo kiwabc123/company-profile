@@ -138,8 +138,6 @@ const DURATION = 5000
               blurDataURL="/images/home-hero-blur.jpg"
               // Natural dimensions proportional to display size and pixel ratio
               // (Assume hero image is 1920x1080 for full HD clarity)
-              width={1920}
-              height={1080}
             />
           <div className={styles.heroOverlay} style={{ position: 'relative', zIndex: 1 }}>
             <h1 className={styles.title}>Hotel & Resort Supply Specialist</h1>

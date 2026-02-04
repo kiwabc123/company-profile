@@ -3,6 +3,7 @@ export interface BlogPostType {
     title: string;
     summary: string;
     content: string;
+    relatedSlugs?: string[];
 }
 
 const posts: BlogPostType[] = [
@@ -99,6 +100,11 @@ const posts: BlogPostType[] = [
   </div>
 </section>
 `,
+        relatedSlugs: [
+          'how-to-care-hotel-linen',
+          'brighten-guest-experience',
+          'hotel-linen-standards',
+        ],
     },
     {
         slug: 'spa-towel-care-tips',
@@ -195,6 +201,11 @@ const posts: BlogPostType[] = [
   </div>
 </section>
 `,
+        relatedSlugs: [
+          'why-hotels-use-white-bed-sheets',
+          'brighten-guest-experience',
+          'hotel-linen-standards',
+        ],
     },
     {
         slug: 'colorful-resort-bed-sheets',
@@ -308,6 +319,11 @@ const posts: BlogPostType[] = [
   </div>
 </section>
 `,
+        relatedSlugs: [
+          'why-hotels-use-white-bed-sheets',
+          'spa-towel-care-tips',
+          'hotel-linen-standards',
+        ],
     },
     {
         slug: 'win-guests-with-white-resort-bed-sheets',
@@ -396,7 +412,12 @@ const posts: BlogPostType[] = [
      ดูผ้าปูที่นอนรีสอร์ทคุณภาพ →
   </a>
 </section>
-`
+`,
+        relatedSlugs: [
+          'why-hotels-use-white-bed-sheets',
+          'how-to-care-hotel-linen',
+          'hotel-linen-standards',
+        ],
     },
     {
         slug: 'wholesale-towel-manufacturer-premium-quality',
@@ -529,7 +550,12 @@ const posts: BlogPostType[] = [
      ดูผ้าขนหนูขายส่งจากโรงงาน →
   </a>
 </section>
-`
+`,
+        relatedSlugs: [
+          'how-to-care-hotel-linen',
+          'brighten-guest-experience',
+          'hotel-linen-standards',
+        ],
     },
     {
   slug: 'hotel-towel-selection-value-and-durability',
@@ -682,9 +708,14 @@ const posts: BlogPostType[] = [
      ดูผ้าขนหนูโรงแรมทั้งหมด →
   </a>
 </section>
-`
-},
-{
+`,
+        relatedSlugs: [
+          'how-to-care-hotel-linen',
+          'brighten-guest-experience',
+          'hotel-linen-standards',
+        ],
+    },
+    {
   slug: 'easy-guide-to-choose-quality-resort-towels',
   title: 'ชิลๆ สบายๆ กับการเลือกซื้อผ้าขนหนูรีสอร์ทให้ได้ของดี มีคุณภาพ',
   summary:
@@ -814,9 +845,14 @@ const posts: BlogPostType[] = [
     และสร้างความประทับใจให้กับผู้เข้าพักได้แบบชิลๆ
   </p>
 </section>
-`
-},
-{
+`,
+        relatedSlugs: [
+          'why-hotels-use-white-bed-sheets',
+          'spa-towel-care-tips',
+          'hotel-linen-standards',
+        ],
+    },
+    {
   slug: '100-percent-cotton-towel-for-health-lovers',
   title: 'ไอเท็มยอดฮิตสำหรับผู้รักสุขภาพ เมื่อเลือกใช้งานผ้าขนหนูคอตตอน 100%',
   summary:
@@ -934,9 +970,14 @@ const posts: BlogPostType[] = [
     สำหรับผู้ที่ต้องการคุณภาพและสุขอนามัยที่ดีในทุกวัน
   </p>
 </section>
-`
-},
-{
+`,
+        relatedSlugs: [
+          'why-hotels-use-white-bed-sheets',
+          'spa-towel-care-tips',
+          'hotel-linen-standards',
+        ],
+    },
+    {
   slug: 'embroidered-logo-towel-business-image',
   title: 'ช่วยสร้างภาพลักษณ์ธุรกิจให้ดูดี ด้วยผ้าขนหนูปักโลโก้',
   summary:
@@ -1044,9 +1085,15 @@ const posts: BlogPostType[] = [
     ในฐานะแบรนด์ที่ใส่ใจในทุกรายละเอียด
   </p>
 </section>
-`
-}
+`,
+        relatedSlugs: [
+          'why-hotels-use-white-bed-sheets',
+          'spa-towel-care-tips',
+          'hotel-linen-standards',
+        ],
+    },
 ];
+
 posts.forEach(post => {
     switch (post.slug) {
         case 'why-hotels-use-white-bed-sheets':
