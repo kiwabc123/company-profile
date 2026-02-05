@@ -3,7 +3,7 @@
 }
 .activeTab {
   color: #fff !important;
-  background: #A5C89E;
+  background: #249E94;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-weight: 700;
@@ -14,10 +14,10 @@
 .mobileNavToggle:active {
   background: #e6f0e6;
   box-shadow: 0 2px 8px rgba(34,56,89,0.18);
-  border: 2px solid #A5C89E;
+  border: 2px solid #249E94;
 }
 .hamburger.active span {
-  background: #A5C89E;
+  background: #249E94;
 }
 /* Utility: hide on mobile, show on desktop */
 .hideOnMobile {
@@ -78,7 +78,7 @@
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--color-accent, #AEB877);
+  background: var(--color-accent, #3BC1A8);
   border-radius: 2px;
   position: absolute;
   left: 0;
@@ -127,7 +127,7 @@
   padding: 2rem;
 }
 .mobileNavMenu a {
-  color: var(--color-accent, #AEB877);
+  color: var(--color-accent, #3BC1A8);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 600;
@@ -161,7 +161,7 @@
   background: transparent;
 }
 .footer {
-  background: var(--color-footer, #D8E983);
+  background: var(--color-footer, #0C7779);
   color: var(--color-text, #222);
   padding: 2rem 0;
   font-size: 1rem;
@@ -186,7 +186,7 @@
   margin-bottom: 1rem;
 }
 .footerCol strong {
-  color: var(--color-accent, #AEB877);
+  color: var(--color-accent, #3BC1A8);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   display: block;

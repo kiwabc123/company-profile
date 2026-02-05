@@ -2,7 +2,7 @@
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.5rem 1.25rem;
-  background: var(--color-primary, #A5C89E);
+  background: var(--color-primary, #249E94);
   color: #fff;
   border-radius: 1rem;
   font-weight: 500;
@@ -11,13 +11,13 @@
   transition: background 0.2s;
 }
 .detailReadmore:hover {
-  background: var(--color-accent, #AEB877);
+  background: var(--color-accent, #3BC1A8);
 }
 
 .detail {
   position: relative;
   height: 300px;
-  background: var(--color-bg-alt, #D8E983);
+  background: var(--color-bg-alt, #0C7779);
   margin-top: 200px;
   color: var(--color-text, #222);
   box-shadow: 0 8px 32px 0 rgba(34, 56, 89, 0.10);
@@ -35,7 +35,7 @@
   left: -10%;
   width: 120%;
   height: 100px;
-  background: var(--color-bg-alt, #D8E983);
+  background: var(--color-bg-alt, #0C7779);
   border-radius: 0 0 50% 50%;
   z-index: 0;
 }
@@ -45,7 +45,7 @@
   z-index: 1;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--color-accent, #AEB877);
+  color: var(--color-accent, #3BC1A8);
   margin-bottom: 1rem;
   text-align: center;
 }

@@ -4,7 +4,7 @@
   background: #f5f5f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #AEB877 0%, #AEB877 30%, #D8E983 100%);
+  background: linear-gradient(135deg, #3BC1A8 0%, #3BC1A8 30%, #0C7779 100%);
   border-radius: 8px;
   border: 2px solid #f5f5f5;
 }
@@ -18,17 +18,17 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #AEB877 #D8E983;
+  scrollbar-color: #3BC1A8 #0C7779;
 }
 /* Project theme color variables */
 :root {
-  --color-bg: #FFFBB1;
-  --color-bg-alt: #D8E983;
-  --color-primary: #A5C89E;
-  --color-accent: #AEB877;
+  --color-bg: #005461;
+  --color-bg-alt: #0C7779;
+  --color-primary: #249E94;
+  --color-accent: #3BC1A8;
   --color-text: #222;
-  --color-header: #A5C89E;
-  --color-footer: #D8E983;
+  --color-header: #249E94;
+  --color-footer: #0C7779;
 }
 *,
 *::before,
