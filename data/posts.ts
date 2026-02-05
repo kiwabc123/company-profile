@@ -98,7 +98,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <div style="margin-top:24px;text-align:center;">
-    <a href="/products" style="display:inline-block;padding:12px 28px;background:#778873;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px #0002;">
+    <a href="/products" style="display:inline-block;padding:12px 28px;background:#AEB877;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px #0002;">
       ดูผ้าปูที่นอนโรงแรมคุณภาพ →
     </a>
   </div>
@@ -199,7 +199,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <div style="text-align:center;margin-top:1.5rem;">
-    <a href="/products" style="padding:10px 22px;background:#778873;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+    <a href="/products" style="padding:10px 22px;background:#AEB877;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
       ดูผ้าปูที่นอนโรงแรมสีขาวริ้วคุณภาพ →
     </a>
   </div>
@@ -317,7 +317,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <div style="text-align:center;margin-top:1.5rem;">
-    <a href="/products" style="padding:10px 22px;background:#778873;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+    <a href="/products" style="padding:10px 22px;background:#AEB877;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
       ดูผ้าปูที่นอนรีสอร์ทผ้าสี →
     </a>
   </div>
@@ -410,7 +410,7 @@ const posts: BlogPostType[] = [
 <section style="text-align:center;margin-top:2rem;">
   <a href="/products"
      style="display:inline-block;padding:12px 28px;
-     background:#778873;color:#fff;
+     background:#AEB877;color:#fff;
      border-radius:8px;font-weight:600;
      text-decoration:none;">
      ดูผ้าปูที่นอนรีสอร์ทคุณภาพ →
@@ -548,7 +548,7 @@ const posts: BlogPostType[] = [
 <section style="text-align:center;margin-top:2.5rem;">
   <a href="/products"
      style="display:inline-block;padding:12px 30px;
-     background:#778873;color:#fff;
+     background:#AEB877;color:#fff;
      border-radius:8px;font-weight:600;
      text-decoration:none;">
      ดูผ้าขนหนูขายส่งจากโรงงาน →
@@ -706,7 +706,7 @@ const posts: BlogPostType[] = [
 <section style="text-align:center;margin-top:2.5rem;">
   <a href="/products/hotel-towels"
      style="display:inline-block;padding:12px 30px;
-     background:#778873;color:#fff;
+     background:#AEB877;color:#fff;
      border-radius:8px;font-weight:600;
      text-decoration:none;">
      ดูผ้าขนหนูโรงแรมทั้งหมด →

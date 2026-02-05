@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className={styles['nav-left']}>
             <div className={styles.logoBlock} aria-label="Logo">
               {imgError ? (
-                <div style={{ width: 32, height: 32, background: '#D2DCB6', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#778873', fontWeight: 700, fontSize: 18 }}>
+                <div style={{ width: 32, height: 32, background: '#D8E983', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#AEB877', fontWeight: 700, fontSize: 18 }}>
                   LOGO
                 </div>
               ) : (
@@ -56,7 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6, type: "spring", stiffness: 120 }}
-                whileHover={{ scale: 1.08, color: "#778873" }}
+                whileHover={{ scale: 1.08, color: "#AEB877" }}
                 whileTap={{ scale: 0.96 }}
                 aria-label="Home"
               >
@@ -66,16 +66,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           <div className={styles['nav-right']}>
             <Link href="/products" passHref legacyBehavior>
-              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Products">Products</motion.a>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#AEB877" }} whileTap={{ scale: 0.96 }} aria-label="Products">Products</motion.a>
             </Link>
             <Link href="/blog" passHref legacyBehavior>
-              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Blog">Blog</motion.a>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#AEB877" }} whileTap={{ scale: 0.96 }} aria-label="Blog">Blog</motion.a>
             </Link>
             <Link href="/about" passHref legacyBehavior>
-              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="About">About</motion.a>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#AEB877" }} whileTap={{ scale: 0.96 }} aria-label="About">About</motion.a>
             </Link>
             <Link href="/contact" passHref legacyBehavior>
-              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#778873" }} whileTap={{ scale: 0.96 }} aria-label="Contact">Contact</motion.a>
+              <motion.a initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.6, type: "spring", stiffness: 120 }} whileHover={{ scale: 1.12, color: "#AEB877" }} whileTap={{ scale: 0.96 }} aria-label="Contact">Contact</motion.a>
             </Link>
           </div>
           {/* Hamburger button for mobile */}
@@ -97,6 +97,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {mobileNavOpen && (
           <div className={styles.mobileNavOverlay} id="mobile-nav-overlay" role="dialog" aria-modal="true">
             <nav className={styles.mobileNavMenu}>
+                  <Link href="/" legacyBehavior>
+                  <a
+                    className={router.pathname === '/' ? styles.activeTab : styles.tab}
+                    onClick={() => setMobileNavOpen(false)}
+                  >Home</a>
+                </Link>
                 <Link href="/products" legacyBehavior>
                   <a
                     className={router.pathname === '/products' ? styles.activeTab : styles.tab}
