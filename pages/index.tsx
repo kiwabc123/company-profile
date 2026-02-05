@@ -122,7 +122,7 @@ const DURATION = 5000
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
       <div className={styles.container}>
-          <section className={styles.hero} style={{ position: 'relative', width: '100vw', minHeight: '100vh', overflow: 'hidden' }}>
+          <section className={styles.hero}>
             <Image
               src="/images/home-hero.jpg"
               alt="Hotel & Resort Supply Specialist - LCP Hero"

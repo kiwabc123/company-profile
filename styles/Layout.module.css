@@ -92,7 +92,6 @@
   .mobileNavToggle {
     display: block;
     position: fixed;
-    top: 1rem;
     right: 1rem;
     left: unset;
     z-index: 202;
