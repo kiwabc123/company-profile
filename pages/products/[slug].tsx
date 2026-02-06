@@ -24,7 +24,22 @@ export default function ProductDetailPage() {
           height={200}
         />
         {product.images && product.images.length > 1 && (
-          <div className={styles.thumbnails}>
+          <div
+            className={styles.thumbnails}
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: 12,
+              overflowX: 'auto',
+              paddingBottom: 4,
+              marginTop: 12,
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'thin',
+              maxWidth: '100%',
+              boxSizing: 'border-box',
+              minWidth: 0,
+            }}
+          >
             {product.images.map((img) => (
               <img
                 key={img}
@@ -35,6 +50,7 @@ export default function ProductDetailPage() {
                 height={60}
                 className={img === mainImg ? styles.activeThumb : styles.thumb}
                 onClick={() => setMainImg(img)}
+                style={{ flex: '0 0 auto', cursor: 'pointer' }}
               />
             ))}
           </div>
