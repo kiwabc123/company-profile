@@ -1,11 +1,13 @@
+import { BlogSlug } from './blogSlugs.enum';
+
 export interface BlogPostType {
-    slug: string;
-    title: string;
-    summary: string;
-    content: string;
-    relatedSlugs?: string[];
-    intro?: string;
-    seoH2?: string;
+  slug: string;
+  title: string;
+  summary: string;
+  content: string;
+  relatedSlugs?: BlogSlug[];
+  intro?: string;
+  seoH2?: string;
 }
 
 const posts: BlogPostType[] = [
@@ -105,9 +107,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
     relatedSlugs: [
-      'how-to-care-hotel-linen',
-      'brighten-guest-experience',
-      'hotel-linen-standards',
+      BlogSlug.HowToCareHotelLinen,
+      BlogSlug.HotelLinenStandards,
+      BlogSlug.ColorfulResortBedSheets,
     ],
   },
 
@@ -207,9 +209,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
         relatedSlugs: [
-          'why-hotels-use-white-bed-sheets',
-          'brighten-guest-experience',
-          'hotel-linen-standards',
+          BlogSlug.WhyHotelsUseWhiteBedSheets,
+          BlogSlug.ColorfulResortBedSheets,
+          BlogSlug.HotelLinenStandards,
         ],
     },
 
@@ -324,9 +326,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
         relatedSlugs: [
-          'why-hotels-use-white-bed-sheets',
-          'spa-towel-care-tips',
-          'hotel-linen-standards',
+          BlogSlug.WhyHotelsUseWhiteBedSheets,
+          BlogSlug.SpaTowelCareTips,
+          BlogSlug.WinGuestsWithWhiteResortBedSheets,
         ],
     },
 {
@@ -434,9 +436,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
   relatedSlugs: [
-    'why-hotels-use-white-bed-sheets',
-    'how-to-care-hotel-linen',
-    'hotel-linen-standards',
+    BlogSlug.WhyHotelsUseWhiteBedSheets,
+    BlogSlug.ColorfulResortBedSheets,
+    BlogSlug.WholesaleTowelManufacturerPremiumQuality,
   ],
 }
 ,
@@ -449,9 +451,9 @@ const posts: BlogPostType[] = [
         content: `
 <section>
   <figure style="text-align:center;margin-bottom:2rem;">
-    <img src="/images/blog/towel-factory-hero.jpg"
+    <img src="images/blogs/wholesale-towel-manufacturer-premium-quality/khang-nguyen-019owcgEiaU-unsplash.jpg"
          alt="โรงงานผู้ผลิตผ้าขนหนูขายส่ง"
-         style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px #0001;" />
+         style="filter:brightness(1.1);max-width:100%;border-radius:12px;box-shadow:0 2px 12px #0001;" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
       โรงงานผู้ผลิตผ้าขนหนูขายส่งมาตรฐานคุณภาพ
     </figcaption>
@@ -487,7 +489,7 @@ const posts: BlogPostType[] = [
   </ul>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/cotton-towel-closeup.jpg"
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%20%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%84_260127_1-UJwhnlt456mZAMNnu1mfYrrpy4l1E0.jpg"
          alt="ผ้าขนหนู Cotton 100%"
          style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
@@ -535,7 +537,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/towel-sizes.jpg"
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%20%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%84_260127_1-UJwhnlt456mZAMNnu1mfYrrpy4l1E0.jpg"
          alt="ขนาดผ้าขนหนูโรงแรม"
          style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
@@ -574,9 +576,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
         relatedSlugs: [
-          'how-to-care-hotel-linen',
-          'brighten-guest-experience',
-          'hotel-linen-standards',
+          BlogSlug.HowToCareHotelLinen,
+          BlogSlug.HotelTowelSelectionValueAndDurability,
+          BlogSlug.EasyGuideToChooseQualityResortTowels,
         ],
     },
     {
@@ -587,7 +589,7 @@ const posts: BlogPostType[] = [
   content: `
 <section>
   <figure style="text-align:center;margin-bottom:2rem;">
-    <img src="/images/blog/hotel-towel-hero.jpg"
+    <img src="images/blogs/hotel-towel-selection-value-and-durability/samuel-wibisono-ch07IPqDJi8-unsplash.jpg"
          alt="ผ้าขนหนูโรงแรมคุณภาพ"
          style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px #0001;" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
@@ -631,7 +633,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/cotton-hotel-towel.jpg"
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%20%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%84_260127_4-YuSJWawjcCZa95MNXXtdk4df2T6gGV.jpg"
          alt="ผ้าขนหนูโรงแรม cotton"
          style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
@@ -692,14 +694,6 @@ const posts: BlogPostType[] = [
     จึงเหมาะสำหรับสถานบริการที่ต้องการความคุ้มค่าในระยะยาว
   </p>
 
-  <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/double-loop-towel.jpg"
-         alt="ผ้าขนหนูขนคู่โรงแรม"
-         style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
-    <figcaption style="font-size:13px;color:#888;margin-top:6px;">
-      ผ้าขนหนูขนคู่ เนื้อแน่น ใช้งานได้นาน เหมาะกับโรงแรม
-    </figcaption>
-  </figure>
 </section>
 
 <section>
@@ -732,9 +726,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
         relatedSlugs: [
-          'how-to-care-hotel-linen',
-          'brighten-guest-experience',
-          'hotel-linen-standards',
+          BlogSlug.HowToCareHotelLinen,
+          BlogSlug.WholesaleTowelManufacturerPremiumQuality,
+          BlogSlug.CottonTowelForHealthLovers,
         ],
     },
     {
@@ -869,9 +863,9 @@ const posts: BlogPostType[] = [
 </section>
 `,
         relatedSlugs: [
-          'why-hotels-use-white-bed-sheets',
-          'spa-towel-care-tips',
-          'hotel-linen-standards',
+          BlogSlug.WhyHotelsUseWhiteBedSheets,
+          BlogSlug.EasyGuideToChooseQualityResortTowels,
+          BlogSlug.CottonTowelForHealthLovers,
         ],
     },
     {
@@ -994,12 +988,12 @@ const posts: BlogPostType[] = [
 </section>
 `,
         relatedSlugs: [
-          'why-hotels-use-white-bed-sheets',
-          'spa-towel-care-tips',
-          'hotel-linen-standards',
+          BlogSlug.WhyHotelsUseWhiteBedSheets,
+          BlogSlug.HotelTowelSelectionValueAndDurability,
+          BlogSlug.EmbroideredLogoTowelBusinessImage,
         ],
     },
-    {
+   {
   slug: 'embroidered-logo-towel-business-image',
   title: 'ช่วยสร้างภาพลักษณ์ธุรกิจให้ดูดี ด้วยผ้าขนหนูปักโลโก้',
   summary:
@@ -1008,76 +1002,61 @@ const posts: BlogPostType[] = [
 <section>
   <h1>ช่วยสร้างภาพลักษณ์ธุรกิจให้ดูดี ด้วยผ้าขนหนูปักโลโก้</h1>
 
+  <figure style="text-align:center;margin:2rem 0;">
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%20%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%84_260127_35-GGYWvpVkBwPYGaTNNQgglntlBSsMIb.jpg"
+         alt="ผ้าขนหนูปักโลโก้สำหรับโรงแรม"
+         style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
+    <figcaption style="font-size:13px;color:#888;margin-top:6px;">
+      ผ้าขนหนูปักโลโก้ ช่วยเสริมภาพลักษณ์ให้สถานบริการดูเป็นมืออาชีพ
+    </figcaption>
+  </figure>
+
   <p>
     สถานบริการต่างๆ ไม่ว่าจะเป็น
     <strong>โรงแรม สปา รีสอร์ท</strong>
     หรือธุรกิจด้านการบริการ
     มักเลือกใช้
     <strong>ผ้าขนหนูปักโลโก้</strong>
-    รวมถึงผ้าอำนวยความสะดวกอื่นๆ
     เพื่อสร้างความเป็นระเบียบและภาพลักษณ์ที่ดีให้กับสถานที่
-  </p>
-
-  <p>
-    การใช้ผ้าขนหนูปักโลโก้
-    ไม่เพียงช่วยบ่งบอกชื่อสถานที่
-    แต่ยังช่วยให้ลูกค้าจดจำแบรนด์ได้ง่ายขึ้น
-    และลดความสับสนในกรณีที่ผ้าขนหนูของลูกค้ามีลักษณะคล้ายกับของสถานบริการ
-    ทำให้สามารถแยกแยะได้อย่างชัดเจน
   </p>
 </section>
 
 <section>
   <h2>สร้างความน่าเชื่อถือด้วยผ้าขนหนูปักโลโก้</h2>
 
+  <figure style="text-align:center;margin:2rem 0;">
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%20%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%84_260127_37-AcHIWMG0vRtOjPaojknJ8oovREI1Yt.jpg"
+         alt="ผ้าขนหนูปักโลโก้ในโรงแรม"
+         style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
+    <figcaption style="font-size:13px;color:#888;margin-top:6px;">
+      รายละเอียดเล็กๆ อย่างโลโก้บนผ้าขนหนู สร้างความประทับใจให้ลูกค้า
+    </figcaption>
+  </figure>
+
   <p>
     โลโก้ถือเป็นหัวใจสำคัญของทุกธุรกิจ
     เปรียบเสมือนใบหน้าของแบรนด์
     ที่ช่วยสื่อสารตัวตนและความเป็นมืออาชีพ
-    ตั้งแต่ก้าวแรกของการสร้างธุรกิจ
-  </p>
-
-  <p>
-    สำหรับโรงแรม รีสอร์ท หรือสถานบริการ
-    การนำโลโก้มาปักบนผ้าขนหนู
-    จะช่วยสร้างความรู้สึก
-    <strong>น่าเชื่อถือ ใส่ใจรายละเอียด และมีมาตรฐาน</strong>
-    ให้กับผู้มาใช้บริการ
-  </p>
-
-  <p>
-    ลูกค้ามักประทับใจกับรายละเอียดเล็กๆ
-    อย่างการเห็นโลโก้ที่ปักอย่างสวยงามบนผ้าขนหนู
-    ซึ่งช่วยเสริมภาพลักษณ์ความหรูหรา
-    ดูโดดเด่นกว่าการใช้ผ้าขนหนูทั่วไป
-    และสร้างความรู้สึกแตกต่างในมุมมองของผู้ใช้บริการ
   </p>
 </section>
 
 <section>
   <h2>ผ้าขนหนูปักโลโก้ สร้างเอกลักษณ์ทางธุรกิจ</h2>
 
+  <figure style="text-align:center;margin:2rem 0;">
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%9C%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%20%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%84_260127_28-nS89QSJu4A7AwuM1uaqnv28qDEbxZP.jpg"
+         alt="ผ้าขนหนูปักโลโก้สร้างเอกลักษณ์แบรนด์"
+         style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
+    <figcaption style="font-size:13px;color:#888;margin-top:6px;">
+      โลโก้บนผ้าขนหนูช่วยให้แบรนด์เป็นที่จดจำ
+    </figcaption>
+  </figure>
+
   <p>
     ผ้าขนหนูปักโลโก้
     ไม่เพียงช่วยให้ธุรกิจดูดี
     แต่ยังเป็นเครื่องมือในการสร้าง
     <strong>เอกลักษณ์ของแบรนด์</strong>
-    ผ่านโลโก้ที่มีคาแรคเตอร์ชัดเจน
-  </p>
-
-  <p>
-    แม้บางครั้งลูกค้าอาจลืมชื่อสถานที่
-    แต่ภาพของโลโก้ที่ปักบนผ้าขนหนู
-    สามารถสร้างความคุ้นเคยและความผูกพันได้
-    โดยโลโก้สามารถสื่อสารตัวตนของแบรนด์ได้เอง
-    โดยไม่ต้องอธิบายเป็นข้อความยาวๆ
-  </p>
-
-  <p>
-    การใช้ผ้าขนหนูปักโลโก้
-    จึงเป็นการสร้างเอกลักษณ์เฉพาะตัวให้กับธุรกิจ
-    ช่วยให้แบรนด์เป็นที่จดจำง่าย
-    และสะท้อนภาพลักษณ์ที่เป็นมืออาชีพในระยะยาว
   </p>
 </section>
 
@@ -1086,63 +1065,48 @@ const posts: BlogPostType[] = [
 
   <p>
     ผ้าขนหนูปักโลโก้
-    สามารถสื่อสารชื่อสถานที่หรือบริการได้อย่างรวดเร็ว
-    ชัดเจน และเข้าใจง่าย
-    โดยใช้พื้นที่น้อยกว่าการใช้ข้อความยาวๆ
-  </p>
-
-  <p>
-    โลโก้สามารถปรับขนาด
-    ย่อหรือขยายได้ตามความเหมาะสม
-    และยังสามารถสื่อความหมายได้ในระดับสากล
-    แม้ผู้มาใช้บริการจะไม่เข้าใจภาษาท้องถิ่นก็ตาม
-  </p>
-
-  <p>
-    ที่สำคัญที่สุด
-    ผ้าขนหนูปักโลโก้
     ช่วยให้ลูกค้าจดจำแบรนด์ได้ง่ายขึ้น
     เสริมความน่าเชื่อถือ
     และสร้างภาพลักษณ์ที่ดีให้กับธุรกิจ
-    ในฐานะแบรนด์ที่ใส่ใจในทุกรายละเอียด
   </p>
 </section>
 `,
-        relatedSlugs: [
-          'why-hotels-use-white-bed-sheets',
-          'spa-towel-care-tips',
-          'hotel-linen-standards',
-        ],
-    },
+  relatedSlugs: [
+    BlogSlug.WhyHotelsUseWhiteBedSheets,
+    BlogSlug.HotelTowelSelectionValueAndDurability,
+    BlogSlug.EmbroideredLogoTowelBusinessImage,
+  ],
+}
+
 ];
 
 posts.forEach(post => {
     switch (post.slug) {
-        case 'why-hotels-use-white-bed-sheets':
+        case BlogSlug.WhyHotelsUseWhiteBedSheets:
             post.title += ' 🛏️';
             break;
-        case 'spa-towel-care-tips':
+        case BlogSlug.SpaTowelCareTips:
             post.title += ' 🧖‍♀️';
             break;
-        case 'colorful-resort-bed-sheets':
+        case BlogSlug.ColorfulResortBedSheets:
             post.title += ' 🌈';
             break;
-        case 'win-guests-with-white-resort-bed-sheets':
+        case BlogSlug.WinGuestsWithWhiteResortBedSheets:
             post.title += ' 🤍';
             break;
-        case 'wholesale-towel-manufacturer-premium-quality':
+        case BlogSlug.WholesaleTowelManufacturerPremiumQuality:
             post.title += ' 🏭';
             break;
-        case 'hotel-towel-selection-value-and-durability':
+        case BlogSlug.HotelTowelSelectionValueAndDurability:
             post.title += ' 🏨';
             break;
-        case 'easy-guide-to-choose-quality-resort-towels':
+        case BlogSlug.EasyGuideToChooseQualityResortTowels:
             post.title += ' 🏝️';
             break;
-        case '100-percent-cotton-towel-for-health-lovers':
+        case BlogSlug.CottonTowelForHealthLovers:
             post.title += ' 💧';
             break;
-        case 'embroidered-logo-towel-business-image':
+        case BlogSlug.EmbroideredLogoTowelBusinessImage:
             post.title += ' 🧵';
             break;
         default:

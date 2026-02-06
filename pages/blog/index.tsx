@@ -49,7 +49,7 @@ const BlogIndex = () => {
             maxWidth: 1100,
             margin: '2rem auto',
             minHeight: 500,
-            gap: 32,
+            gap: 24,
           }}
         >
           {/* Sidebar */}
@@ -269,6 +269,8 @@ const BlogIndex = () => {
                           }}
                         >
                           {selectedPost.relatedSlugs.map((slug) => {
+                            console.log(slug , 'related slug' ,posts.map(p => p.slug));
+                            
                             const related = posts.find(
                               (p) => p.slug === slug
                             );
