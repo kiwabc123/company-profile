@@ -19,7 +19,7 @@ const posts: BlogPostType[] = [
     content: `
 <section>
   <figure style="text-align:center;margin-bottom:2rem;">
-    <img src="/images/blog/white-bed-hero.jpg" alt="ผ้าปูที่นอนโรงแรมสีขาว" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px #0001;" />
+    <img src="/images/blogs/why-hotels-use-white-bed-sheets/dario-gomes-x9CHYEn0J6E-unsplash.jpg" alt="ผ้าปูที่นอนโรงแรมสีขาว" style="max-width:100%;border-radius:12px;box-shadow:0 2px 12px #0001;" width="800" height="534" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
       ผ้าปูที่นอนโรงแรมสีขาวเรียบ ภาพลักษณ์มาตรฐานสากล
     </figcaption>
@@ -57,7 +57,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/housekeeping-bed.jpg" alt="การดูแลผ้าปูที่นอนโรงแรม" style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
+    <img src="images/blogs/why-hotels-use-white-bed-sheets/junseong-lee-1b5zJprHkEs-unsplash.jpg" alt="การดูแลผ้าปูที่นอนโรงแรม" style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" width="700" height="467" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
       การดูแลผ้าปูที่นอนโรงแรมเป็นส่วนหนึ่งของมาตรฐานบริการ
     </figcaption>
@@ -82,7 +82,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/guest-room-white.jpg" alt="ห้องพักโรงแรมผ้าปูที่นอนสีขาว" style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" />
+    <img src="images/blogs/why-hotels-use-white-bed-sheets/hiroshi-kimura-PXPleXh2m7s-unsplash.jpg" alt="ห้องพักโรงแรมผ้าปูที่นอนสีขาว" style="max-width:90%;border-radius:10px;box-shadow:0 2px 8px #0001;" width="700" height="467" />
     <figcaption style="font-size:13px;color:#888;margin-top:6px;">
       ห้องพักโรงแรมที่สร้างความมั่นใจด้วยผ้าปูที่นอนสีขาว
     </figcaption>
@@ -104,20 +104,21 @@ const posts: BlogPostType[] = [
   </div>
 </section>
 `,
-        relatedSlugs: [
-          'how-to-care-hotel-linen',
-          'brighten-guest-experience',
-          'hotel-linen-standards',
-        ],
-    },
-    {
-        slug: 'spa-towel-care-tips',
-        title: 'วิธีดูแลผ้าขนหนูสปาให้ดูใหม่อยู่เสมอ',
-        intro: 'เคล็ดลับการดูแลผ้าขนหนูสำหรับสปาและโรงแรม ให้คงความนุ่มนวลและสะอาดเหมือนใหม่ พร้อม insight จากผู้ประกอบการจริง',
-        seoH2: 'การเลือกผ้าปูที่นอนโรงแรมสีขาวริ้ว',
-        summary:
-          'เคล็ดลับการดูแลผ้าขนหนูสำหรับสปาและโรงแรม ให้คงความนุ่มนวลและสะอาดเหมือนใหม่ พร้อม insight จากผู้ประกอบการจริง',
-        content: `<section>
+    relatedSlugs: [
+      'how-to-care-hotel-linen',
+      'brighten-guest-experience',
+      'hotel-linen-standards',
+    ],
+  },
+
+  {
+    slug: 'spa-towel-care-tips',
+    title: 'วิธีดูแลผ้าขนหนูสปาให้ดูใหม่อยู่เสมอ',
+    intro: 'เคล็ดลับการดูแลผ้าขนหนูสำหรับสปาและโรงแรม ให้คงความนุ่มนวลและสะอาดเหมือนใหม่ พร้อม insight จากผู้ประกอบการจริง',
+    seoH2: 'การเลือกผ้าปูที่นอนโรงแรมสีขาวริ้ว',
+    summary:
+      'เคล็ดลับการดูแลผ้าขนหนูสำหรับสปาและโรงแรม ให้คงความนุ่มนวลและสะอาดเหมือนใหม่ พร้อม insight จากผู้ประกอบการจริง',
+    content: `<section>
       <p>
       ผ้าปูที่นอนโรงแรมสีขาวริ้วหรือสีขาวเรียบ
       ส่วนใหญ่มักผลิตจากเส้นด้ายคุณภาพดี มีความทนทานต่อการซักรีด
@@ -134,7 +135,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/white-stripe-bed.jpg" alt="ผ้าปูที่นอนโรงแรมสีขาวริ้ว" style="max-width:90%;border-radius:10px;" />
+    <img src="/images/blog/white-stripe-bed.jpg" alt="ผ้าปูที่นอนโรงแรมสีขาวริ้ว" style="max-width:90%;border-radius:10px;" width="700" height="467" />
     <figcaption>ผ้าปูที่นอนโรงแรมสีขาวริ้ว เพิ่มมิติและความหรูให้ห้องพัก</figcaption>
   </figure>
 </section>
