@@ -135,7 +135,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/white-stripe-bed.jpg" alt="ผ้าปูที่นอนโรงแรมสีขาวริ้ว" style="max-width:90%;border-radius:10px;" width="700" height="467" />
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_ชุดเครื่องนอน ขาวเรียบ_ขาวริ้ว_260127_7-lSo2FiwA9p5cYSfUIVkpSseI5LmF1D.jpg" alt="ผ้าปูที่นอนโรงแรมสีขาวริ้ว" style="max-width:90%;border-radius:10px;" width="700" height="467" />
     <figcaption>ผ้าปูที่นอนโรงแรมสีขาวริ้ว เพิ่มมิติและความหรูให้ห้องพัก</figcaption>
   </figure>
 </section>
@@ -212,6 +212,7 @@ const posts: BlogPostType[] = [
           'hotel-linen-standards',
         ],
     },
+
     {
         slug: 'colorful-resort-bed-sheets',
         title: 'เพิ่มความสดใสให้ผู้มาพักด้วยผ้าปูที่นอนรีสอร์ทผ้าสี',
@@ -219,8 +220,6 @@ const posts: BlogPostType[] = [
             'ผ้าปูที่นอนรีสอร์ทผ้าสีช่วยสร้างบรรยากาศสดใส โมเดิร์น และมีเอกลักษณ์ เพิ่มความประทับใจให้ผู้มาพักผ่านการเลือกสีและการตกแต่งที่ลงตัว',
         content: `
 <section>
-  <h1>เพิ่มความสดใสให้ผู้มาพักด้วยผ้าปูที่นอนรีสอร์ทผ้าสี</h1>
-
   <p>
     ผ้าปูที่นอนรีสอร์ทผ้าสี เป็นอีกหนึ่งตัวเลือกที่มีดีไซน์สวย เก๋ สีสันจัดจ้าน
     และมีความโมเดิร์น พร้อมเอกลักษณ์เฉพาะตัวของการตกแต่งที่แมตช์กันอย่างลงตัว
@@ -235,7 +234,7 @@ const posts: BlogPostType[] = [
   </p>
 
   <figure style="text-align:center;margin:2rem 0;">
-    <img src="/images/blog/colorful-resort-bed.jpg" alt="ผ้าปูที่นอนรีสอร์ทผ้าสี" style="max-width:90%;border-radius:10px;" />
+    <img src="images/blogs/colorful-resort-bed-sheets/meg-von-haartman-A0MAsOayD5k-unsplash.jpg" alt="ผ้าปูที่นอนรีสอร์ทผ้าสี" style="max-width:90%;border-radius:10px;" />
     <figcaption>ผ้าปูที่นอนรีสอร์ทผ้าสี เพิ่มความสดใสให้ห้องพัก</figcaption>
   </figure>
 </section>
@@ -330,14 +329,13 @@ const posts: BlogPostType[] = [
           'hotel-linen-standards',
         ],
     },
-    {
-        slug: 'win-guests-with-white-resort-bed-sheets',
-        title: 'เอาชนะใจผู้เข้าพักด้วยผ้าปูที่นอนรีสอร์ทสีขาว',
-        summary:
-            'เหตุผลที่โรงแรมและรีสอร์ทกว่า 95% เลือกใช้ผ้าปูที่นอนสีขาว พร้อมวิธีเลือกผ้าที่ช่วยสร้างภาพลักษณ์หรู สะอาด และประหยัดในระยะยาว',
-        content: `
+{
+  slug: 'win-guests-with-white-resort-bed-sheets',
+  title: 'เอาชนะใจผู้เข้าพักด้วยผ้าปูที่นอนรีสอร์ทสีขาว',
+  summary:
+      'เหตุผลที่โรงแรมและรีสอร์ทกว่า 95% เลือกใช้ผ้าปูที่นอนสีขาว พร้อมวิธีเลือกผ้าที่ช่วยสร้างภาพลักษณ์หรู สะอาด และประหยัดในระยะยาว',
+  content: `
 <section>
-  <h1>เอาชนะใจผู้เข้าพักด้วยผ้าปูที่นอนรีสอร์ทสีขาว</h1>
   <p>
     โรงแรมหรือรีสอร์ทส่วนใหญ่มักจะใช้
     <strong>ผ้าปูที่นอนรีสอร์ทสีขาว</strong>
@@ -351,6 +349,11 @@ const posts: BlogPostType[] = [
     และให้ความรู้สึกราวกับว่าห้องเพิ่งได้รับการปรับปรุงใหม่
     แม้ในความเป็นจริงจะเป็นเพียงการเปลี่ยนผ้าปูที่นอนเท่านั้น
   </p>
+
+  <figure style="max-width:90%;border-radius:10px;">
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99%20%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A_%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B9%89%E0%B8%A7_260127_1-qGqxraEaTMt8zsB515vbMKef4kDnwf.jpg" alt="ผ้าปูที่นอนรีสอร์ทสีขาวในห้องพัก" style="max-width:90%;border-radius:10px;" />
+    <figcaption>ผ้าปูที่นอนสีขาวช่วยสร้างความรู้สึกสะอาดและหรูหรา</figcaption>
+  </figure>
 </section>
 
 <section>
@@ -367,6 +370,12 @@ const posts: BlogPostType[] = [
     หากผ้าชำรุดหรือขาดก็สามารถเปลี่ยนผืนใหม่ได้ทันที
     โดยไม่ต้องกังวลเรื่องสีหม่นหรือสีไม่ตรงกัน
   </p>
+
+  <figure style="text-align:center;margin:2rem 0;">
+    <img src="images/blogs/why-hotels-use-white-bed-sheets/giorgio-trovato-PxvOL2GVnoY-unsplash.jpg" alt="เตียงโรงแรมพร้อมผ้าปูที่นอนสีขาว" style="max-width:90%;border-radius:10px;" />
+    <figcaption>ผ้าปูที่นอนสีขาวช่วยให้ห้องดูใหม่และสะอาดอยู่เสมอ</figcaption>
+  </figure>
+
   <blockquote>
     ประสบการณ์สำคัญที่โรงแรมมอบให้ลูกค้า คือ<br />
     <strong>“clean, white, high-thread-count sheets”</strong>
@@ -390,6 +399,12 @@ const posts: BlogPostType[] = [
     โดยการใช้เทคโนโลยีอัดอากาศในกระบวนการทอ
     ทำให้ผ้ามีความเงางาม สม่ำเสมอ และนุ่มยิ่งขึ้น
   </p>
+
+  <figure style="text-align:center;margin:2rem 0;">
+    <img src="https://aosmcukxqimimqgh.public.blob.vercel-storage.com/product/LINE_ALBUM_%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99%20%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A_%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B9%89%E0%B8%A7_260127_3-U19GTDA3Qe7HEdhtaPaBpIyPXhcRJY.jpg" alt="ผ้าปูที่นอนสีขาวคุณภาพโรงแรม" style="max-width:90%;border-radius:12px;" />
+    <figcaption>ผ้าปูคุณภาพช่วยยกระดับภาพลักษณ์ของรีสอร์ท</figcaption>
+  </figure>
+
   <p>
     ผ้าปูที่นอนรีสอร์ทสีขาวจึงถือเป็น
     <strong>จุดเริ่มต้นของคุณภาพและภาพลักษณ์ระดับมืออาชีพ</strong>
@@ -418,12 +433,14 @@ const posts: BlogPostType[] = [
   </a>
 </section>
 `,
-        relatedSlugs: [
-          'why-hotels-use-white-bed-sheets',
-          'how-to-care-hotel-linen',
-          'hotel-linen-standards',
-        ],
-    },
+  relatedSlugs: [
+    'why-hotels-use-white-bed-sheets',
+    'how-to-care-hotel-linen',
+    'hotel-linen-standards',
+  ],
+}
+,
+    
     {
         slug: 'wholesale-towel-manufacturer-premium-quality',
         title: 'มาตรฐานสินค้าเกรดดี ราคาเบา จากโรงงานผู้ผลิตผ้าขนหนูขายส่ง',
