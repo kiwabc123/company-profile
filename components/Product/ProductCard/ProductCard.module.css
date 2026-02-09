@@ -37,11 +37,6 @@
   box-shadow: 0 12px 36px rgba(0,0,0,0.14);
 }
 
-.imageWrapper {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
 
 .thumbnails {
   display: flex;
@@ -79,7 +74,6 @@
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  max-height: 180px;
 }
 @media (max-width: 600px) {
   .imageWrapper {
