@@ -14,8 +14,6 @@ export default function ProductCard({ product }: { product: Product }) {
             src={typeof mainImg === 'string' ? mainImg : mainImg?.url}
             alt={product.name}
             loading="lazy"
-            width={300}
-            height={200}
             onError={e => {
               (e.target as HTMLImageElement).style.display = 'none';
               const block = document.createElement('div');

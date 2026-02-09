@@ -36,13 +36,13 @@ const products = [
     description: 'Premium support and integration.',
     image: '/images/product-d.jpg',
   },
-    {
+  {
     id: 5,
     name: 'Product D',
     description: 'Premium support and integration.',
     image: '/images/product-d.jpg',
   },
-    {
+  {
     id: 6,
     name: 'Product D',
     description: 'Premium support and integration.',
@@ -52,10 +52,10 @@ const products = [
 
 
 const Home: NextPage = () => {
-const pauseRef = useRef(false)
-console.log(pauseRef);
-const DURATION = 5000
- const [sliderRef] = useKeenSlider<HTMLDivElement>(
+  const pauseRef = useRef(false)
+  console.log(pauseRef);
+  const DURATION = 5000
+  const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
       renderMode: 'performance',
@@ -100,13 +100,13 @@ const DURATION = 5000
     ]
   )
   // Pause on mouse over, resume on mouse leave
-    const handleMouseOver = () => {
-      pauseRef.current = true
-    }
+  const handleMouseOver = () => {
+    pauseRef.current = true
+  }
 
-    const handleMouseOut = () => {
-      pauseRef.current = false
-    }
+  const handleMouseOut = () => {
+    pauseRef.current = false
+  }
 
 
   return (
@@ -122,23 +122,23 @@ const DURATION = 5000
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
       <div className={styles.container}>
-          <section className={styles.hero}>
-            <Image
-              src="/images/home-hero.jpg"
-              alt="Hotel & Resort Supply Specialist - LCP Hero"
-              sizes="100vw"
-              style={{
-                objectFit: 'cover',
-                zIndex: 0,
-              }}
-              layout='fill'
-              priority
-              // Use blur placeholder for low-res preview
-              placeholder="blur"
-              blurDataURL="/images/home-hero-blur.jpg"
-              // Natural dimensions proportional to display size and pixel ratio
-              // (Assume hero image is 1920x1080 for full HD clarity)
-            />
+        <section className={styles.hero}>
+          <Image
+            src="/images/home-hero.jpg"
+            alt="Hotel & Resort Supply Specialist - LCP Hero"
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              zIndex: 0,
+            }}
+            layout='fill'
+            priority
+            // Use blur placeholder for low-res preview
+            placeholder="blur"
+            blurDataURL="/images/home-hero-blur.jpg"
+          // Natural dimensions proportional to display size and pixel ratio
+          // (Assume hero image is 1920x1080 for full HD clarity)
+          />
           <div className={styles.heroOverlay} style={{ position: 'relative', zIndex: 1 }}>
             <h1 className={styles.title}>Hotel & Resort Supply Specialist</h1>
             <p className={styles.description}>
@@ -152,42 +152,130 @@ const DURATION = 5000
             </a>
           </div>
         </section>
-      <section className={styles.aboutStrip}>
-        <div className={styles.aboutProof}>
-          <span>10+ Years Experience</span>
-          <span>| Hotel & Spa Focus</span>
-          <span>| Wholesale Supply</span>
-        </div>
-      </section>
+        <section className={styles.aboutStrip}>
+          <div className={styles.aboutProof}>
+            <span>10+ Years Experience</span>
+            <span>| Hotel & Spa Focus</span>
+            <span>| Wholesale Supply</span>
+          </div>
+        </section>
 
-      <Discover items={discoverItems} />
+        <Discover items={discoverItems} />
+        <section style={{ margin: '3rem 0' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontWeight: 700, fontSize: '2rem' }}>Why Choose Us</h2>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '2rem',
+            maxWidth: 1000,
+            margin: '0 auto',
+          }}>
+            <div
+              style={{
+          flex: '1 1 250px',
+          minWidth: 250,
+          background: '#f7faf7',
+          borderRadius: '1rem',
+          padding: '1.5rem',
+          boxShadow: '0 2px 12px #0001',
+          textAlign: 'center',
+              }}
+            >
+              <img
+          src="/images/hotelstaff.jpg"
+          alt="Expertise"
+          style={{
+            width: '100%',
+            height: 160,
+            objectFit: 'cover',
+            borderRadius: '0.75rem',
+            marginBottom: 16,
+          }}
+              />
 
-      <section className={styles.products}>
-        <h2>Our Customers</h2>
-        <div
-          ref={sliderRef}
-          className={`keen-slider ${styles.slider}`}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        >
-          {products.map((product) => (
-            <div className="keen-slider__slide" key={product.id}>
-              <div className={styles.card}>
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  loading="lazy"
-                  width={240}
-                  height={120}
-                  style={{ width: '100%', borderRadius: '1rem', marginBottom: '1rem', objectFit: 'cover', minHeight: 120 }}
-                />
-                <h3>{product.name}</h3>
-              </div>
+              <h3
+          style={{
+            fontWeight: 600,
+            fontSize: '1.2rem',
+            marginBottom: 8,
+          }}
+              >
+          Experience & Expertise
+              </h3>
+
+              <p style={{ color: '#444', fontSize: '1rem' }}>
+          Our seasoned team brings deep expertise in the hotel and spa industry, providing expert guidance tailored to your needs.
+              </p>
             </div>
-          ))}
-        </div>
-      </section>
-    </div>
+
+            <div style={{
+              flex: '1 1 250px',
+              minWidth: 250,
+              background: '#f7faf7',
+              borderRadius: '1rem',
+              padding: '2rem 1.5rem',
+              boxShadow: '0 2px 12px #0001',
+              textAlign: 'center',
+            }}>
+              <img src="/images/whitetowels.jpg" alt="Product Quality" style={{
+          width: '100%',
+          height: 160,
+          objectFit: 'cover',
+          borderRadius: '0.75rem',
+          marginBottom: 16,
+              }} />
+              <h3 style={{ fontWeight: 600, fontSize: '1.2rem', marginBottom: 8 }}>Premium Quality Products</h3>
+              <p style={{ color: '#444', fontSize: '1rem' }}>Carefully curated premium-grade products that are durable and perfectly suited for hotel and spa operations.</p>
+            </div>
+            <div style={{
+              flex: '1 1 250px',
+              minWidth: 250,
+              background: '#f7faf7',
+              borderRadius: '1rem',
+              padding: '2rem 1.5rem',
+              boxShadow: '0 2px 12px #0001',
+              textAlign: 'center',
+            }}>
+              <img src="/images/customerservice.jpg" alt="Fast Service" style={{
+          width: '100%',
+          height: 160,
+          objectFit: 'cover',
+          borderRadius: '0.75rem',
+          marginBottom: 16,
+              }} />
+              <h3 style={{ fontWeight: 600, fontSize: '1.2rem', marginBottom: 8 }}>Fast & Attentive Service</h3>
+              <p style={{ color: '#444', fontSize: '1rem' }}>On-time delivery with dedicated after-sales support that cares about every detail.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.products}>
+          <h2>Our Customers</h2>
+          <div
+            ref={sliderRef}
+            className={`keen-slider ${styles.slider}`}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            {products.map((product) => (
+              <div className="keen-slider__slide" key={product.id}>
+                <div className={styles.card}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    width={240}
+                    height={120}
+                    style={{ width: '100%', borderRadius: '1rem', marginBottom: '1rem', objectFit: 'cover', minHeight: 120 }}
+                  />
+                  <h3>{product.name}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </>
   );
 };
