@@ -251,7 +251,7 @@ const BlogIndex = () => {
                         <strong
                           style={{
                             fontSize: 18,
-                            color: '#357a38',
+                            color: '#3BC1A8',
                             display: 'block',
                             marginBottom: 8,
                           }}
@@ -281,7 +281,7 @@ const BlogIndex = () => {
                                   style={{
                                     background: '#eaf6ee',
                                     border: '1px solid #b7d7c9',
-                                    color: '#357a38',
+                                    color: '#3BC1A8',
                                     fontSize: 16,
                                     cursor: 'pointer',
                                     padding: '10px 18px',

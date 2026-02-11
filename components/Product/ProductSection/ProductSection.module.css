@@ -1,9 +1,45 @@
+/* Section wrapper for each category */
+.categorySection {
+  margin-bottom: 2.5rem;
+}
+
+/* Main products page title */
+.productsTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+/* Main container for product section */
+/* Responsive container for product section */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .pageContainer {
+    max-width: 100vw;
+    padding: 0.75rem 0.5rem;
+  }
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+}
 .categoryTitle {
   margin: 1.5rem 0 1rem;
 }
 .sectionTitle {
-  background: linear-gradient(90deg, #F6F8F3 60%, #E3E9DB 100%);
-  color: #249E94;
+  background: linear-gradient(90deg, #F3F6F4 60%, #EEF3EF 100%);
+  color: #1F7A6E;
   font-size: 1.6rem;
   font-weight: 700;
   padding: 0.7rem 1.2rem;
@@ -11,7 +47,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
-  box-shadow: 0 2px 8px rgba(122,158,126,0.07);
+  box-shadow: 0 2px 8px rgba(31,122,110,0.08);
 }
 /* Card grid spacing improved */
 .productGrid {
@@ -19,6 +55,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
+  padding: 0 14px;
 }
 @media (max-width: 1200px) {
   .productGrid {

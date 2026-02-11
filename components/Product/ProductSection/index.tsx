@@ -13,13 +13,15 @@ export default function ProductSection({
   if (!products.length) return null
 
   return (
-    <section style={{ marginBottom: '3rem' }}>
-      <h2 className={styles.sectionTitle}>{title}</h2>
-      <div className={styles.productGrid}>
-        {products.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
-    </section>
+    <div className={styles.pageContainer}>
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 className={styles.sectionTitle}>{title}</h2>
+        <div className={styles.productGrid}>
+          {products.map((p) => (
+            <ProductCard key={p.id} product={p} />
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }

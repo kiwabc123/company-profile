@@ -20,7 +20,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ selectedSlug, onSelect }) => 
               width: '100%',
               padding: '8px 0',
               fontWeight: selectedSlug === post.slug ? 700 : 400,
-              color: selectedSlug === post.slug ? '#3BC1A8' : '#222',
+              color: selectedSlug === post.slug ? '#357a38' : '#222',
               fontSize: 18,
               cursor: 'pointer',
               borderRadius: 4,

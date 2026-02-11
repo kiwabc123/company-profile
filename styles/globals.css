@@ -4,12 +4,12 @@
   background: #f5f5f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #3BC1A8 0%, #3BC1A8 30%, #0C7779 100%);
+  background: linear-gradient(135deg, #1F7A6E 0%, #1F7A6E 30%, #C6A96A 100%);
   border-radius: 8px;
   border: 2px solid #f5f5f5;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #5a5f4b 0%, #5a5f4b 30%, #bfc9a6 100%);
+  background: linear-gradient(135deg, #2a9984 0%, #2a9984 30%, #d4b884 100%);
 }
 ::-webkit-scrollbar-corner {
   background: #f5f5f5;
@@ -18,40 +18,23 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #3BC1A8 #0C7779;
+  scrollbar-color: #1F7A6E #C6A96A;
 }
-/* Project theme color variables */
+/* Project theme color variables - Premium palette */
 :root {
-  --color-bg: #005461;
-  --color-bg-alt: #0C7779;
-  --color-primary: #249E94;
-  --color-accent: #3BC1A8;
+  --color-bg: #FAFCFB;
+  --color-bg-alt: #F3F7F5;
+  --color-primary: #1F7A6E;
+  --color-accent: #C6A96A;
   --color-text: #222;
-  --color-header: #249E94;
-  --color-footer: #2f6f4f;
+  --color-text-light: #FFFFFF;
+  --color-header: #1F7A6E;
+  --color-footer: #1F7A6E;
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-html,
-body {
-  display: block;
-  margin: 0 !important;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-}
-:root {
-  --color-bg: #A5C89E;
-  --color-bg-alt: #FFFBB1;
-  --color-primary: #AEB877;
-  --color-accent: #3BC1A8;
-  --color-text: #222;
-  --color-header: #357a38;
-  --color-footer: #357a38;
 }
 
 a {

@@ -78,7 +78,7 @@
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--color-accent, #3BC1A8);
+  background: var(--color-accent, #357a38);
   border-radius: 2px;
   position: absolute;
   left: 0;
@@ -126,14 +126,14 @@
   padding: 2rem;
 }
 .mobileNavMenu a {
-  color: var(--color-accent, #3BC1A8);
+  color: var(--color-accent, #357a38);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
 .mobileNavMenu a:hover {
-  color: var(--color-primary, #5a5f4b);
+  color: #F2D9A0;
 }
 @media (max-width: 600px) {
   .footer {
@@ -161,7 +161,7 @@
 }
 .footer {
   background: var(--color-footer, #0C7779);
-  color: var(--color-text, #222);
+  color: var(--color-text-light, #FFFFFF);
   padding: 2rem 0;
   font-size: 1rem;
   border-top: 1px solid #eaeaea;
@@ -185,7 +185,7 @@
   margin-bottom: 1rem;
 }
 .footerCol strong {
-  color: var(--color-accent, #3BC1A8);
+  color: var(--color-accent, #357a38);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   display: block;
@@ -217,7 +217,7 @@
 }
 
 .nav a:hover {
-  color: var(--color-primary);
+  color: #F2D9A0;
 }
 
 .nav-left {
@@ -238,7 +238,7 @@
 }
 
 .nav-left a:hover {
-    color: var(--color-accent);
+    color: #F2D9A0;
 }
 
 .nav-right {

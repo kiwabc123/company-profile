@@ -11,7 +11,7 @@
   transition: background 0.2s;
 }
 .detailReadmore:hover {
-  background: var(--color-accent, #3BC1A8);
+  background: var(--color-accent, #357a38);
 }
 
 .detail {
@@ -45,7 +45,7 @@
   z-index: 1;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--color-accent, #3BC1A8);
+  color: var(--color-accent, #357a38);
   margin-bottom: 1rem;
   text-align: center;
 }
