@@ -9,6 +9,15 @@ export default function ProductsPage() {
   const router = useRouter()
   const tab = (router.query.tab as 'area' | 'category') || 'area'
     const products = PRODUCTS
+    //remove key thumbnail ,images
+    const productsForExcel = PRODUCTS.map(product => ({
+      ...product,
+      keySpecs: product.specs
+        ?.map(spec => `${spec.label}: ${spec.value}`)
+        .join(" | ")
+    }))
+    console.log("PRODUCTS",productsForExcel.map(({ thumbnail, images, specs, ...rest }) => rest));
+     
   return (
     <div style={{ padding: '2rem' }}>
       <h1>Products</h1>

@@ -2,14 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import styles from '../styles/About.module.css';
-
-const VALUES = [
-  { icon: '⭐', label: 'Customer First', text: 'Success of our clients drives everything we do' },
-  { icon: '🔒', label: 'Integrity', text: 'Transparency and honesty in all dealings' },
-  { icon: '🚀', label: 'Innovation', text: 'Continuous improvement and modern solutions' },
-  { icon: '🤝', label: 'Teamwork', text: 'Respect and collaboration across all levels' },
-  { icon: '🏆', label: 'Excellence', text: 'High standards in quality and service' },
-];
+import aboutData from '../data/aboutPageData.json';
 
 export default function About() {
   const storyRef = useRef(null);
@@ -41,25 +34,26 @@ export default function About() {
 
     return () => observer.disconnect();
   }, []);
-
+   console.log(aboutData ,"aboutData");
+   
   return (
     <>
       <Head>
-        <title>{`About Us | Company Name`}</title>
+        <title>{aboutData.page.title}</title>
         <meta
           name="description"
-          content="Learn more about Company Name, our history, customers, and vision."
+          content={aboutData.page.description}
         />
       </Head>
 
       {/* Hero Section - Enhanced */}
       <section className={styles.hero}>
         <div className={styles.overlay}>
-          <h1>Fair Price Supply</h1>
+          <h1>{aboutData.hero.title}</h1>
           <p>
-            Thailand's trusted partner for hotel linens, amenities, and hospitality essentials.<br />
+            {aboutData.hero.subtitle}<br />
             <span className={styles.heroStats}>
-              7+ Years Experience | 200+ Clients | Nationwide Delivery
+              {aboutData.hero.stats}
             </span>
           </p>
         </div>
@@ -71,18 +65,15 @@ export default function About() {
         <div ref={storyRef} className={styles['story-full-width']} style={{ opacity: 0 }}>
           <div className={styles['story-container']}>
             <img 
-              src="\images\Hotel-room-with-quality-linens.jpg" 
-              alt="Hotel room with quality linens" 
+              src={aboutData.story.image} 
+              alt={aboutData.story.imageAlt} 
               className={styles['story-image']}
             />
             <div className={styles['story-content']}>
-              <h2>Our Story</h2>
-              <p>
-                Founded in 2018, Fair Price Supply began as a small, passionate team focused on solving real problems for hotels and resorts. Today, we're proud to partner with over 200 hospitality businesses across Thailand, providing quality linens, amenities, and essentials they can rely on.
-              </p>
-              <p>
-                We didn't just start a business—we built a mission: to make premium hospitality supplies accessible, reliable, and affordable for every property, from boutique resorts to large hotel chains.
-              </p>
+              <h2>{aboutData.story.heading}</h2>
+              {aboutData.story.content.map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
             </div>
           </div>
         </div>
@@ -92,26 +83,25 @@ export default function About() {
           {/* Who We Serve */}
           <div className={styles['card-modern']}>
             <div className={styles['card-header']}>
-              <h3>🏨 Who We Serve</h3>
+              <h3>{aboutData.whoWeServe.icon} {aboutData.whoWeServe.heading}</h3>
             </div>
             <ul className={styles['serve-list']}>
-              <li>Hotels &amp; Resorts</li>
-              <li>Serviced Apartments</li>
-              <li>Spas &amp; Wellness Centers</li>
-              <li>Hospitality Businesses</li>
+              {aboutData.whoWeServe.items.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
             </ul>
           </div>
 
           {/* Vision & Mission */}
           <div className={styles['card-modern']}>
             <div className={styles['card-header']}>
-              <h3>🎯 Vision &amp; Mission</h3>
+              <h3>{aboutData.visionAndMission.icon} {aboutData.visionAndMission.heading}</h3>
             </div>
             <p>
-              To be Thailand's leading provider of hospitality supplies, empowering our clients to deliver outstanding guest experiences.
+              {aboutData.visionAndMission.vision}
             </p>
             <p className={styles['mission-text']}>
-              We build long-term relationships based on trust, integrity, and measurable results.
+              {aboutData.visionAndMission.mission}
             </p>
           </div>
         </div>
@@ -120,7 +110,7 @@ export default function About() {
         <div ref={valuesRef} className={styles['values-section']} style={{ opacity: 0 }}>
           <h2>Our Values</h2>
           <div className={styles['values-grid']}>
-            {VALUES.map((value, idx) => (
+            {aboutData.values.map((value, idx) => (
               <div key={idx} className={styles['value-card']}>
                 <div className={styles['value-icon']}>{value.icon}</div>
                 <h4>{value.label}</h4>
@@ -134,17 +124,18 @@ export default function About() {
       {/* Enhanced CTA Section */}
       <section ref={ctaRef} className={styles['about-cta-section']} style={{ opacity: 0 }}>
         <div className={styles['about-cta-content']}>
-          <h2>Upgrade Your Guest Experience Today</h2>
+          <h2>{aboutData.cta.heading}</h2>
           <p className={styles['cta-subtitle']}>
-            Discover premium linens, amenities, and supplies trusted by Thailand's best hotels
+            {aboutData.cta.subtitle}
           </p>
           <div className={styles['about-cta-buttons']}>
-            <Link href="/products" passHref legacyBehavior>
-              <a className={styles['aboutCtaBtn']}>Browse Hotel Supplies</a>
-            </Link>
-            <Link href="/contact" passHref legacyBehavior>
-              <a className={styles['aboutCtaBtn'] + ' ' + styles['cta-secondary']}>Get a Quote</a>
-            </Link>
+            {aboutData.cta.buttons.map((btn, idx) => (
+              <Link key={idx} href={btn.href} passHref legacyBehavior>
+                <a className={styles['aboutCtaBtn'] + (btn.variant === 'secondary' ? ' ' + styles['cta-secondary'] : '')}>
+                  {btn.text}
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

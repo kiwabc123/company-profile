@@ -1,0 +1,81 @@
+{
+  "page": {
+    "title": "About Us | Company Name",
+    "description": "Learn more about Company Name, our history, customers, and vision."
+  },
+  "hero": {
+    "title": "Fair Price Supply",
+    "subtitle": "Thailand's trusted partner for hotel linens, amenities, and hospitality essentials.",
+    "stats": "7+ Years Experience | 200+ Clients | Nationwide Delivery"
+  },
+  "story": {
+    "heading": "Our Story",
+    "foundedYear": 2018,
+    "clientCount": 200,
+    "content": [
+      "Founded in 2018, Fair Price Supply began as a small, passionate team focused on solving real problems for hotels and resorts. Today, we're proud to partner with over 200 hospitality businesses across Thailand, providing quality linens, amenities, and essentials they can rely on.",
+      "We didn't just start a business—we built a mission: to make premium hospitality supplies accessible, reliable, and affordable for every property, from boutique resorts to large hotel chains."
+    ],
+    "image": "images/Hotel-room-with-quality-linens.jpg",
+    "imageAlt": "Hotel room with quality linens"
+  },
+  "whoWeServe": {
+    "heading": "Who We Serve",
+    "icon": "🏨",
+    "items": [
+      "Hotels & Resorts",
+      "Serviced Apartments",
+      "Spas & Wellness Centers",
+      "Hospitality Businesses"
+    ]
+  },
+  "visionAndMission": {
+    "heading": "Vision & Mission",
+    "icon": "🎯",
+    "vision": "To be Thailand's leading provider of hospitality supplies, empowering our clients to deliver outstanding guest experiences.",
+    "mission": "We build long-term relationships based on trust, integrity, and measurable results."
+  },
+  "values": [
+    {
+      "icon": "⭐",
+      "label": "Customer First",
+      "text": "Success of our clients drives everything we do"
+    },
+    {
+      "icon": "🔒",
+      "label": "Integrity",
+      "text": "Transparency and honesty in all dealings"
+    },
+    {
+      "icon": "🚀",
+      "label": "Innovation",
+      "text": "Continuous improvement and modern solutions"
+    },
+    {
+      "icon": "🤝",
+      "label": "Teamwork",
+      "text": "Respect and collaboration across all levels"
+    },
+    {
+      "icon": "🏆",
+      "label": "Excellence",
+      "text": "High standards in quality and service"
+    }
+  ],
+  "cta": {
+    "heading": "Upgrade Your Guest Experience Today",
+    "subtitle": "Discover premium linens, amenities, and supplies trusted by Thailand's best hotels",
+    "buttons": [
+      {
+        "text": "Browse Hotel Supplies",
+        "href": "/products",
+        "variant": "primary"
+      },
+      {
+        "text": "Get a Quote",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

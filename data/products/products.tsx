@@ -3,7 +3,7 @@ import { PRODUCT_CATEGORIES } from './categories'
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'A01',
+    id: 'a-001',
     code: 'A01',
     name: 'Hotel White & Stripe Bedding Set',
     slug: 'hotel-white-stripe-bedding-set',
@@ -12,7 +12,7 @@ export const PRODUCTS: Product[] = [
     description:
       'ชุดเครื่องนอนสีขาวเรียบและลายริ้วแบบโรงแรม ผลิตจากผ้าคุณภาพสูง ให้สัมผัสนุ่ม สะอาด หรูหรา เหมาะสำหรับโรงแรม รีสอร์ท และที่พักทุกระดับ',
 
-    category: PRODUCT_CATEGORIES[0], // Linen
+    category: PRODUCT_CATEGORIES[0], 
     area: [ProductArea.BEDROOM],
 
     thumbnail: {
@@ -49,7 +49,7 @@ export const PRODUCTS: Product[] = [
     isActive: true,
   },
   {
-    id: 'B01',
+    id: 'b-001',
     code: 'B01',
     name: 'Hotel Spring & Pocket Spring Mattress',
     slug: 'hotel-spring-pocket-spring-mattress',
