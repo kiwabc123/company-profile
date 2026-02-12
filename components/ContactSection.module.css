@@ -6,8 +6,12 @@
 
 .title {
   font-size: 2.4rem;
-  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
   text-align: center;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .card {
@@ -20,11 +24,13 @@
 .badge {
   display: inline-block;
   margin: 0.75rem 0 1.5rem;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 999px;
-  background: #249E94;
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 ul {

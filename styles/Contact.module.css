@@ -154,13 +154,13 @@
   display: flex;
   align-items: center;
   gap: 0.7em;
-  background: linear-gradient(90deg, #009688 0%, #4caf50 100%);
+  background: linear-gradient(90deg, #A86E6A 0%, #A8A092 100%);
   color: #fff;
   font-size: 1.18rem;
   font-weight: 700;
   padding: 1em 2.2em;
   border-radius: 2.5em;
-  box-shadow: 0 4px 18px rgba(76,175,80,0.13);
+  box-shadow: 0 4px 18px rgba(168, 110, 106, 0.13);
   text-decoration: none;
   letter-spacing: 0.01em;
   transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
@@ -173,9 +173,9 @@
   justify-content: center;
 }
 .ctaBtn:hover, .ctaBtn:focus {
-  background: linear-gradient(90deg, #388e3c 0%, #009688 100%);
+  background: linear-gradient(90deg, #A8A092 0%, #A86E6A 100%);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 32px rgba(76,175,80,0.18);
+  box-shadow: 0 8px 32px rgba(168, 110, 106, 0.18);
   outline: none;
 }
 

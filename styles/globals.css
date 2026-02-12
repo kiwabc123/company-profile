@@ -4,12 +4,12 @@
   background: #f5f5f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #1F7A6E 0%, #1F7A6E 30%, #C6A96A 100%);
+  background: linear-gradient(135deg, #BFB4A3 0%, #BFB4A3 30%, #A86E6A 100%);
   border-radius: 8px;
   border: 2px solid #f5f5f5;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #2a9984 0%, #2a9984 30%, #d4b884 100%);
+  background: linear-gradient(135deg, #A8A092 0%, #A8A092 30%, #956860 100%);
 }
 ::-webkit-scrollbar-corner {
   background: #f5f5f5;
@@ -18,28 +18,53 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #1F7A6E #C6A96A;
+  scrollbar-color: #BFB4A3 #A86E6A;
 }
 /* Project theme color variables - Premium palette */
 :root {
-  --color-bg: #3C9A8D;
-  --color-bg-alt: #3C9A8D;
+  /* Backgrounds */
+  --color-bg: #F5F1ED;        /* ครีมอ่อน Warm */
+  --color-bg-alt: #EFE9E3;    /* เมาฟ อ่อน */
 
-  --color-primary: #1F7A6E;
-  --color-primary-hover: #176358;
+  /* Primary (Warm Greige) */
+  --color-primary: #BFB4A3;
+  --color-primary-hover: #A8A092;
+
+  /* Accent (Dusty Rose / Mauve) */
+  --color-accent: #A86E6A;
+  --color-accent-hover: #956860;
+
+  /* Text */
+  --color-text: #2A2A2A;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #6B7280;
+
+  /* Surfaces */
+  --color-card: #FFFFFF;
+
+  /* Layout */
+  --color-header: #BFB4A3;
+  --color-footer: #BFB4A3;
+}
+/* :root {
+  --color-bg: #F4F1EC;
+  --color-bg-alt: #F4F1EC;
+
+  --color-primary: #7A8087;
+  --color-primary-hover: #915C59;
 
   --color-accent: #C6A96A;
   --color-accent-hover: #B89955;
 
-  --color-text: #1F2933;
+  --color-text: #2A2A2A;
   --color-text-light: #FFFFFF;
   --color-text-muted: #6B7280;
 
   --color-card: #FFFFFF;
 
-  --color-header: #1F7A6E;
-  --color-footer: #1F7A6E;
-}
+  --color-header: #7A8087;
+  --color-footer: #7A8087;
+} */
 
 *,
 *::before,

@@ -38,8 +38,8 @@
   margin: 1.5rem 0 1rem;
 }
 .sectionTitle {
-  background: linear-gradient(90deg, #F3F6F4 60%, #EEF3EF 100%);
-  color: #1F7A6E;
+  background: linear-gradient(90deg, #F9F7F4 60%, #F4F1ED 100%);
+  color: var(--color-primary);
   font-size: 1.6rem;
   font-weight: 700;
   padding: 0.7rem 1.2rem;
@@ -47,7 +47,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
-  box-shadow: 0 2px 8px rgba(31,122,110,0.08);
+  box-shadow: 0 2px 8px rgba(168,110,106,0.08);
 }
 /* Card grid spacing improved */
 .productGrid {

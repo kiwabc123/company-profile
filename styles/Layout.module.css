@@ -3,7 +3,7 @@
 }
 .activeTab {
   color: #fff !important;
-  background: #249E94;
+  background: var(--color-primary);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-weight: 700;
@@ -14,10 +14,10 @@
 .mobileNavToggle:active {
   background: #e6f0e6;
   box-shadow: 0 2px 8px rgba(34,56,89,0.18);
-  border: 2px solid #249E94;
+  border: 2px solid var(--color-primary);
 }
 .hamburger.active span {
-  background: #249E94;
+  background: var(--color-primary);
 }
 /* Utility: hide on mobile, show on desktop */
 .hideOnMobile {
@@ -78,7 +78,7 @@
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--color-accent, #357a38);
+  background: var(--color-accent);
   border-radius: 2px;
   position: absolute;
   left: 0;
@@ -126,14 +126,14 @@
   padding: 2rem;
 }
 .mobileNavMenu a {
-  color: var(--color-accent, #357a38);
+  color: var(--color-accent);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
 .mobileNavMenu a:hover {
-  color: #F2D9A0;
+  color: var(--color-accent-hover);
 }
 @media (max-width: 600px) {
   .footer {
@@ -160,8 +160,8 @@
   background: transparent;
 }
 .footer {
-  background: var(--color-footer, #0C7779);
-  color: var(--color-text-light, #FFFFFF);
+  background: var(--color-footer);
+  color: var(--color-text-light);
   padding: 2rem 0;
   font-size: 1rem;
   border-top: 1px solid #eaeaea;
@@ -183,12 +183,18 @@
   flex: 1 1 200px;
   min-width: 180px;
   margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
 }
 .footerCol strong {
-  color: var(--color-accent, #357a38);
+  color: var(--color-text-light);
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
   display: block;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 .header {
@@ -217,7 +223,7 @@
 }
 
 .nav a:hover {
-  color: #F5E4B8;
+  color: var(--color-accent-hover);
 }
 
 .nav-left {
@@ -227,7 +233,7 @@
 }
 
 .nav-left a {
-  color: #F2D9A0;
+  color: var(--color-text-light);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.5rem;
@@ -238,7 +244,7 @@
 }
 
 .nav-left a:hover {
-    color: #F5E4B8;
+    color: var(--color-accent);
 }
 
 .nav-right {
@@ -259,12 +265,4 @@
   margin: 0 auto;
   background: var(--color-bg);
   
-}
-
-.footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: var(--color-footer);
-  color: var(--color-accent);
-  font-size: 0.95rem;
 }

@@ -59,7 +59,7 @@
   transition: box-shadow 0.2s;
 }
 .thumbnailActive {
-  box-shadow: 0 0 0 2px var(--color-primary, #249E94);
+  box-shadow: 0 0 0 2px var(--color-primary, #BFB4A3);
 }
 .thumbnail img,
 .thumbnailActive img {
@@ -123,7 +123,7 @@
 
 .cateBadge {
   display: inline-block;
-  background: #3C9D8F;
+  background: #A86E6A;
   color: #fff;
   border-radius: 0.7rem;
   padding: 0.25rem 0.6rem;
