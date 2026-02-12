@@ -22,15 +22,25 @@
 }
 /* Project theme color variables - Premium palette */
 :root {
-  --color-bg: #FAFCFB;
-  --color-bg-alt: #F3F7F5;
+  --color-bg: #3C9A8D;
+  --color-bg-alt: #3C9A8D;
+
   --color-primary: #1F7A6E;
+  --color-primary-hover: #176358;
+
   --color-accent: #C6A96A;
-  --color-text: #222;
+  --color-accent-hover: #B89955;
+
+  --color-text: #1F2933;
   --color-text-light: #FFFFFF;
+  --color-text-muted: #6B7280;
+
+  --color-card: #FFFFFF;
+
   --color-header: #1F7A6E;
   --color-footer: #1F7A6E;
 }
+
 *,
 *::before,
 *::after {

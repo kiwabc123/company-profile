@@ -133,3 +133,22 @@
   margin-bottom: 0.2rem;
   box-shadow: 0 1px 4px rgba(60,157,143,0.15);
 }
+
+.areaBadge {
+  display: inline-block;
+  background: #E8F4F2;
+  color: #2A7B72;
+  border: 1px solid #B8DDD8;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  transition: all 0.2s ease;
+}
+
+.areaBadge:hover {
+  background: #D1E9E4;
+  border-color: #7FC7BB;
+  color: #1a5650;
+}

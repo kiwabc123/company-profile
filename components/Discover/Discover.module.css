@@ -127,7 +127,7 @@
 
 .discoverCard:hover img {
   transform: scale(1.08);
-  filter: brightness(1.08) saturate(1.1);
+  /* filter: brightness(1.08) saturate(1.1); */
 }
 .discoverCard:hover .discoverOverlay {
   background: linear-gradient(

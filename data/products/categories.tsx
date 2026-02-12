@@ -3,9 +3,9 @@ import { ProductCategory } from "../../interface/categoty";
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
 
   {
-    id: 'cat-linen',
-    name: 'Linen',
-    slug: 'linen',
+    id: 'cat-cotton',
+    name: 'Cotton',
+    slug: 'cotton',
   },
   {
     id: 'cat-cleaning',
