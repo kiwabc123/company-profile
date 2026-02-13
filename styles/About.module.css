@@ -1,7 +1,7 @@
 .about-block-divider {
   width: 100%;
   height: 1.5px;
-  background: linear-gradient(90deg, #e3f0ee 0%, #b2d8b2 100%);
+  background: linear-gradient(90deg, #f5f0e8 0%, #D4C8BC 100%);
   opacity: 0.45;
   margin: 0 0 1.1rem 0;
   border-radius: 1px;
@@ -64,9 +64,9 @@
   justify-content: center;
   align-items: center;
   margin: 4rem 0 0 0;
-  background: linear-gradient(135deg, #e3f0ee 0%, #f7fafd 100%);
+  background: linear-gradient(135deg, #f5f0e8 0%, #FBF7F3 100%);
   padding: 4rem 2rem;
-  border-top: 1px solid rgba(59,193,168,0.1);
+  border-top: 1px solid rgba(168, 110, 106, 0.1);
 }
 .about-cta-content {
   text-align: center;
@@ -291,7 +291,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(59,193,168,0.4) 0%, rgba(56,142,60,0.3) 100%);
+  background: linear-gradient(135deg, rgba(191, 180, 163, 0.4) 0%, rgba(168, 110, 106, 0.3) 100%);
 }
 
 .overlay {

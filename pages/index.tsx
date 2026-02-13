@@ -143,7 +143,7 @@ const Home: NextPage = () => {
             <h1 className={styles.title}>Hotel & Resort Supply Specialist</h1>
             <p className={styles.description}>
               Supplying hotels, resorts, and spas with quality linens, amenities, and hospitality essentials.<br />
-              <span style={{ fontWeight: 500, color: '#b2d8b2', fontSize: '1.08rem', display: 'block', marginTop: '0.7em' }}>
+              <span style={{ fontWeight: 500, color: '#A86E6A', fontSize: '1.08rem', display: 'block', marginTop: '0.7em' }}>
                 Trusted by leading hospitality businesses across Thailand.
               </span>
             </p>

@@ -136,9 +136,9 @@
 
 .areaBadge {
   display: inline-block;
-  background: #E8F4F2;
-  color: #2A7B72;
-  border: 1px solid #B8DDD8;
+  background: #FBF7F3;
+  color: #6B5D52;
+  border: 1px solid #D4C8BC;
   border-radius: 0.6rem;
   padding: 0.3rem 0.7rem;
   font-size: 0.75rem;
@@ -148,7 +148,7 @@
 }
 
 .areaBadge:hover {
-  background: #D1E9E4;
-  border-color: #7FC7BB;
-  color: #1a5650;
+  background: #F5EFE6;
+  border-color: #BFAF9E;
+  color: #5A4E45;
 }
