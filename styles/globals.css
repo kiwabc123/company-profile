@@ -22,10 +22,8 @@
 }
 /* Project theme color variables - Premium palette */
 :root {
-  /* Backgrounds */
-  --color-bg: #8FA79E
-;        /* ครีมอ่อน Warm */
-  --color-bg-alt: #9FB7AE;    /* เมาฟ อ่อน */
+  --color-bg: #C7DDD6;
+  --color-bg-alt: #D5E8E2;
 
   /* Primary (Warm Greige) */
   --color-primary: #BFB4A3;
@@ -44,28 +42,9 @@
   --color-card: #FFFFFF;
 
   /* Layout */
-  --color-header: #BFB4A3;
-  --color-footer: #BFB4A3;
+  --color-header: #9F9587;
+  --color-footer: #7F988F;
 }
-/* :root {
-  --color-bg: #F4F1EC;
-  --color-bg-alt: #F4F1EC;
-
-  --color-primary: #7A8087;
-  --color-primary-hover: #915C59;
-
-  --color-accent: #C6A96A;
-  --color-accent-hover: #B89955;
-
-  --color-text: #2A2A2A;
-  --color-text-light: #FFFFFF;
-  --color-text-muted: #6B7280;
-
-  --color-card: #FFFFFF;
-
-  --color-header: #7A8087;
-  --color-footer: #7A8087;
-} */
 
 *,
 *::before,
