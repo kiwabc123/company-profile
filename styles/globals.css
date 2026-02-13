@@ -23,8 +23,9 @@
 /* Project theme color variables - Premium palette */
 :root {
   /* Backgrounds */
-  --color-bg: #F5F1ED;        /* ครีมอ่อน Warm */
-  --color-bg-alt: #EFE9E3;    /* เมาฟ อ่อน */
+  --color-bg: #8FA79E
+;        /* ครีมอ่อน Warm */
+  --color-bg-alt: #9FB7AE;    /* เมาฟ อ่อน */
 
   /* Primary (Warm Greige) */
   --color-primary: #BFB4A3;
