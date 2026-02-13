@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import 'keen-slider/keen-slider.min.css';
 
 import { useKeenSlider } from 'keen-slider/react';
 import React, { useEffect, useRef, useState } from 'react';
