@@ -41,6 +41,8 @@ export default function ProductCard({ product }: { product: Product }) {
                 className={mainImg === img ? styles.thumbnailActive : styles.thumbnail}
                 onClick={e => {
                   e.preventDefault();
+                  console.log(img);
+                  
                   setMainImg(img);
                 }}
                 aria-label={`Show image ${idx + 1}`}
