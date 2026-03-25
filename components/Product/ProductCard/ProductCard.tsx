@@ -37,7 +37,7 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.images.map((img, idx) => (
               <button
                 type="button"
-                key={img}
+                key={idx}
                 className={mainImg === img ? styles.thumbnailActive : styles.thumbnail}
                 onClick={e => {
                   e.preventDefault();

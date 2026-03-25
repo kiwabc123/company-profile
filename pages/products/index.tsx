@@ -12,6 +12,7 @@ export default function ProductsPage() {
     //remove key thumbnail ,images
     const productsForExcel = PRODUCTS.map(product => ({
       ...product,
+      features: product?.features?.join(" | "),
       keySpecs: product.specs
         ?.map(spec => `${spec.label}: ${spec.value}`)
         .join(" | ")
