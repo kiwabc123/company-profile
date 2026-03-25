@@ -20,11 +20,10 @@
     "react-intersection-observer": "^10.0.2"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^16.1.6",
+    "@next/bundle-analyzer": "^12.3.4",
     "@types/node": "16.18.68",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
-    "eslint": "^9.39.2",
     "typescript": "4.9.5"
   },
   "engines": {
